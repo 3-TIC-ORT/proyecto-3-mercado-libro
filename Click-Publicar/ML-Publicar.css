@@ -131,6 +131,24 @@ background-color: #E7E7E7;
 width: 260px;
 height: 100px;
 margin: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.foto{
+font-size: 25px;
+text-align: center;
+}
+.mini{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.nombre{
+font-size: 20px;
+}
+.tacho{
+font-size: 15px;
 }
 .mas{
 border-radius: 50%;
