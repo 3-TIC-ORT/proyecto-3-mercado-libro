@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-3-mercado-libro",
+  "version": "1.0.0",
+  "description": "Proyecto de 3er año TIC de Leonel Abud, Nicolás Battías, Nicolás Chiprut, y Pedro Henriquez.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3-TIC-ORT/proyecto-3-mercado-libro.git"
+  },
+  "author": "Leonel Abud, Nicolás Battías, Nicolás Chiprut, y Pedro Henriquez.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3-TIC-ORT/proyecto-3-mercado-libro/issues"
+  },
+  "homepage": "https://github.com/3-TIC-ORT/proyecto-3-mercado-libro#readme"
+}
