@@ -1,7 +1,7 @@
 // /* atributos del objeto van a ser: nombre, ft, materia, descripcion, año(3ro), nombre de usuario(se hace en el login),
 // mail del vendedor, telefono */
 import fs from "fs";
-function publicar(nombre,foto,materia,descripcion,año,nombreDeUsuario,mail,numero,id){
+function publicar(nombre,foto,materia,descripcion,año,nombreDeUsuario,mail,numero){
     let numerito;
     let leido = fs.readFileSync("../publisSubidas.json","utf-8");
     leido= JSON.parse(leido);
@@ -41,6 +41,5 @@ function eliminar(id){
     }
     fs.writeFileSync("../publisSubidas.json",JSON.stringify(nuevaLista));
 }
-//ELEGI EL ID A ELIMINAR, ESTO LO TIENE QUE CONECTAR EL FRONT.
-eliminar(1)
 
+eliminar(0)
