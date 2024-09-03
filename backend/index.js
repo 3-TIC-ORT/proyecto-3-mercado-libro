@@ -1,6 +1,5 @@
 import fs from "fs";
 
-
 function registrarse(nombre,email,contraseña){
     if (nombre.length >3 && contraseña.length > 3){
         if (email.endsWith(".com") && email.includes("@") && !email.startsWith("@")){
@@ -36,4 +35,3 @@ function iniciarSesion(emailOusuario, contraseña){
     return false;
 }
 
-iniciarSesion("nico","nico")
