@@ -34,4 +34,3 @@ function iniciarSesion(emailOusuario, contraseña){
     console.log("Usuario o contraseña incorrectos");
     return false;
 }
-

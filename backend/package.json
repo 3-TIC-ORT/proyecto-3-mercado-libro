@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/3-TIC-ORT/proyecto-3-mercado-libro/issues"
   },
-  "homepage": "https://github.com/3-TIC-ORT/proyecto-3-mercado-libro#readme"
+  "homepage": "https://github.com/3-TIC-ORT/proyecto-3-mercado-libro#readme",
+  "dependencies": {
+    "soquetic": "^1.0.3"
+  }
 }
