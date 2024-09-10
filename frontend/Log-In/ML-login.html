@@ -9,11 +9,14 @@
 </head>
 <body>
     <div class="grande"><h1 class="bienvenido">Bienvenido</h1>
-    <input class="usuario" placeholder="Usuario">
-    <input class="contraseña" placeholder="Contraseña">
-    <button class="login">Log-in</button>
+    <input class="usuario" id="usuario" placeholder="Usuario o Email">
+    <input class="contraseña" id="contraseña" placeholder="Contraseña">
+    <button class="login" id="login">Log-in</button>
     <a href="" class="registrate">¿No tienes cuenta? Regístrate</a>
     </div>
 
 </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+    <script src="../BASE/socket.js"></script>
+    <script src="ML-login.js"></script>
 </html>

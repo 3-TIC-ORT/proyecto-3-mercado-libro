@@ -1,7 +1,12 @@
 import fs from "fs";
+import {onEvent,startServer} from "soquetic";
 
-function registrarse(nombre,email,contraseña){
-    if (nombre.length >3 && contraseña.length > 3){
+
+function registrarse(info){
+    let nombre = info.nombre;
+    let email = info.email;
+    let contraseña = info.contraseña;
+    if (nombre.length > 3 && contraseña.length > 3){
         if (email.endsWith(".com") && email.includes("@") && !email.startsWith("@")){
 
             let user = {}
@@ -21,16 +26,23 @@ function registrarse(nombre,email,contraseña){
 }
 
 
-function iniciarSesion(emailOusuario, contraseña){
-    let usuarios = JSON.parse(fs.readFileSync("USUARIOS/usuarios.json"));
+function iniciarSesion(info){
+    let emailOusuario = info.emailOusuario;
+    let contraseña = info.contraseña;
+    let usuarios = JSON.parse(fs.readFileSync("DATOS/usuarios.json"));
     for (let i of usuarios){
         if (emailOusuario === i.nombre || emailOusuario === i.email){
             if (contraseña === i.contraseña){
                 console.log(`Bienvenido, ${i.nombre}`);
-                return true;
+                return {ok: true, user: i.nombre};
             }
         }
     }
     console.log("Usuario o contraseña incorrectos");
-    return false;
+    return {ok:false};
 }
+
+onEvent("registrarse",registrarse);
+onEvent("login",iniciarSesion);
+
+startServer();
