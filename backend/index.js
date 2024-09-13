@@ -3,8 +3,8 @@ import {onEvent,startServer} from "soquetic";
 
 
 function registrarse(info){
-    let nombre = info.nombre;
-    let email = info.email;
+    let nombre = info.usuario;
+    let email = info.mail;
     let contraseña = info.contraseña;
     if (nombre.length > 3 && contraseña.length > 3){
         if (email.endsWith(".com") && email.includes("@") && !email.startsWith("@")){
@@ -13,15 +13,15 @@ function registrarse(info){
             user.nombre = nombre;
             user.contraseña = contraseña;
             user.email = email;
-            let usuarios = JSON.parse(fs.readFileSync("USUARIOS/usuarios.json","utf-8"));
+            let usuarios = JSON.parse(fs.readFileSync("DATOS/usuarios.json","utf-8"));
             usuarios.push(user);
-            fs.writeFileSync("USUARIOS/usuarios.json",JSON.stringify(usuarios));
-            return true;
+            fs.writeFileSync("DATOS/usuarios.json",JSON.stringify(usuarios));
+            return {ok:true, user: user.nombre};
         }else{
-            return false;
+            return {ok:false, msg:"Ingrese un correo válido."};
         }
     }else{
-        return false;
+        return {ok:false, msg: "El usuario y la contraseña deben tener más de tres caracteres."};
     }
 }
 
