@@ -29,6 +29,14 @@ border: 0;
 background-color: #F5F5F5;
 padding-left: 8px;   
 }
+.mail{
+    width: 299px;
+    height: 50px;
+    margin-top: -70px;
+    border: 0;
+    background-color: #F5F5F5;
+    padding-left: 8px;
+}
 .contraseña{
     width: 299px;
     height: 50px;
@@ -43,7 +51,7 @@ width: 307px;
 height: 50px;
 margin-top: -70px;
 border: 0;
-background-color: #F5F5F5;
+background-color: #d2f2ff;
 }
 .registrate{
     margin-top: -80px;
