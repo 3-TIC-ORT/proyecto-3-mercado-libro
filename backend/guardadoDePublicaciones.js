@@ -3,7 +3,7 @@
 import fs from "fs";
 function publicar(nombre,foto,materia,descripcion,año,nombreDeUsuario,mail,numero){
     let numerito;
-    let leido = fs.readFileSync("../publisSubidas.json","utf-8");
+    let leido = fs.readFileSync("DATOS/publisSubidas.json","utf-8");
     leido= JSON.parse(leido);
     if(leido.length===0){
         numerito=0;
@@ -11,7 +11,7 @@ function publicar(nombre,foto,materia,descripcion,año,nombreDeUsuario,mail,nume
         numerito= leido[leido.length-1].id + 1;
     }
 
-    let datos = {
+    let DATOS = {
         nombre: nombre,
         foto: foto,
         materia: materia,
@@ -22,16 +22,16 @@ function publicar(nombre,foto,materia,descripcion,año,nombreDeUsuario,mail,nume
         numero: numero,
         id: numerito
     }
-    let elJson= fs.readFileSync("../publisSubidas.json","utf-8");
+    let elJson= fs.readFileSync("DATOS/publisSubidas.json","utf-8");
     elJson=JSON.parse(elJson);
-    elJson.push(datos);
-    fs.writeFileSync("../publisSubidas.json",JSON.stringify(elJson));
+    elJson.push(DATOS);
+    fs.writeFileSync("DATOS/publisSubidas.json",JSON.stringify(elJson));
 }
 
 //ELIMINAR PUBLICACIONES:
 
 function eliminar(id){
-    let publicaciones = fs.readFileSync("../publisSubidas.json","utf-8");
+    let publicaciones = fs.readFileSync("DATOS/publisSubidas.json","utf-8");
     publicaciones = JSON.parse(publicaciones);
     let nuevaLista = [];
     for(let i of publicaciones){
@@ -39,5 +39,8 @@ function eliminar(id){
             nuevaLista.push(i);
         }
     }
-    fs.writeFileSync("../publisSubidas.json",JSON.stringify(nuevaLista));
+    fs.writeFileSync("DATOS/publisSubidas.json",JSON.stringify(nuevaLista));
 }
+
+
+publicar("nombre","foto","materia","descripcion","año","nombreDeUsuario","mail","numero");
