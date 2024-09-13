@@ -159,17 +159,19 @@ justify-content: space-between;
 }
 .nombrelibro{
 border: 0;
-font-size: 40px;
-width: 50%;
-height: 100%;
+font-size: 50px;
+width: 60%;
+height: 130%;
 background-color: #E7E7E7;
 padding-left: 4px;
+position: relative;
+bottom: 20px;
 }
 .nombrelibro:focus{
 outline: 0;
 }
 .nombrelibro::placeholder{
-font-size: 40px;
+font-size: 50px;
 color: #000000;
 }
 .masinfo{
