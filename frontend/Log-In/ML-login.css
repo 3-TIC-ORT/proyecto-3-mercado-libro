@@ -56,3 +56,6 @@ color: black;
 .registrate:visited{
 color: black;
 }
+.registrate:hover{
+cursor: pointer;
+}
