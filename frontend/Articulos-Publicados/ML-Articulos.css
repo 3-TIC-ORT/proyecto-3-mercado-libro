@@ -1,174 +1,136 @@
 *{
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body{
-display: flex;
+    display: flex;
 }
-.columna{
-height: 100vh;
-width: 13vw;
-background-color: #D9D9D9;
+aside{
+    height: 100vh;
+    width: 13vw;
+    background-color: #D9D9D9;
 }
 .god{
-height: 60vh;
-width: 13vw;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
+    height: 60vh;
+    width: 13vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .categorias{
-font-size: 25px;
-}
-.septimo{
-width: 100%;
-height: 20px;
-background-color: #f3f3f3;
-border: 0;
-transition: 0.2s all;
-}
-.primer{
-width: 100%;
-height: 20px;
-background-color: #f3f3f3;
-border: 0;
-transition: 0.2s all;
-}
-.segundo{
-width: 100%;
-height: 20px;
-background-color: #f3f3f3;
-border: 0;
-transition: 0.2s all;
-}
-.tercer{
-width: 100%;
-height: 20px;
-background-color: #f3f3f3;
-border: 0;
-transition: 0.2s all;
-}
-.cuarto{
-width: 100%;
-height: 20px;
-background-color: #f3f3f3;
-border: 0;
-transition: 0.2s all;
-}
-.quinto{
-width: 100%;
-height: 20px;
-background-color: #f3f3f3;
-border: 0;
-transition: 0.2s all;
+    font-size: 160%;
 }
 .grados{
-color: black;
-text-align: center;
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 6%;
+    background-color: #f3f3f3;
+    border: 0;
+    transition: 0.2s all;
 }
 button:hover{
-background-color: #aaaaaa;
-cursor: pointer;
+    background-color: #aaaaaa;
+    cursor: pointer;
 }
 .sesion{
-margin-top: 200px;
-background-color: #d45858;
-width: 100%;
-height: 20px;
-border: 0;
-transition: 0.2s all;
+    margin-top: 110%;
+    background-color: #d45858;
+    width: 100%;
+    height: 4%;
+    border: 0;
+    transition: 0.2s all;
 }
 .sesion:hover{
-background-color: #D89494;;
+    background-color: #D89494;;
 }
-.derecha{
-height: 100vh;
-width: 87vw;
-display: flex;
-flex-direction: column;
-align-items: center;
+main{
+    height: 100vh;
+    width: 87vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.arriba{
-height: 40px;
-width: 75vw;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-top: 30px;
+nav{
+    height: 10%;
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5vh;
 }
 .buscador{
-width: 60vw;
-height: 40px;
-font-size: 20px;
-background-color: #D9D9D9;
-border: 0;
-padding-left: 10px;
+    width: 60vw;
+    height: 70%;
+    font-size: 155%;
+    background-color: #D9D9D9;
+    border: 0;
+    padding-left: 1%;
+    box-sizing: border-box;
 }
 .cuenta{
-width: 8vw;
-height: 90%;
-font-size: 17px;
-background-color: #D9D9D9;
-border: 0;
-transition: 0.2s all;
-color: black;
-display: flex;
-align-items: center;
-justify-content: center;
+    width: 8vw;
+    height: 70%;
+    font-size: 110%;
+    background-color: #D9D9D9;
+    border: 0;
+    transition: 0.2s all;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .buscador::placeholder{
-font-size: 25px;
+    font-size: 100%;
 }
-.articulos{
-width: 90%;
-height: 81%;
-background-color: #D9D9D9;
-margin-top: 20px;
-font-size: 60px;
-display: flex;
-align-items: center;
-flex-direction: column;
+section{
+    width: 90%;
+    height: 81%;
+    background-color: #D9D9D9;
+    margin-top: 1%;
+    font-size: 4.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .h4{
-text-align: center;
-margin-top: 20px;
+    margin-top: 1.5%;
 }
 .publicadosinvisible{
-width: 1070px;
-height: 590px;
-margin-top: 10px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
-max-width: 1070px;
+    width: 100%;
+    height: 100%;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .libros{
-background-color: #E7E7E7;
-width: 260px;
-height: 100px;
-margin: 20px;
+    background-color: #E7E7E7;
+    width: 25%;
+    height: 24%;
+    margin: 20px;
 }
 .mas{
-border-radius: 50%;
-width: 70px;
-height: 70px;
-background-color: rgb(101, 101, 233);
-display: flex;
-justify-content: center;
-align-items: center;
-position: fixed;
-right: 20px;
-bottom: 20px;
-border: 3px solid white;
-font-size: 70px;
-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(101, 101, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: 3px solid white;
+    font-size: 70px;
+    color: white;
 }
 .mas:hover{
-background-color: rgb(121, 121, 233);
+    background-color: rgb(121, 121, 233);
 }
 a{
-text-decoration: none;
-text-align: center;
-color: black;
+    text-decoration: none;
+    text-align: center;
+    color: black;
 }

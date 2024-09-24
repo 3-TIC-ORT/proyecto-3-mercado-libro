@@ -8,24 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="columna">
+    <aside>
         <div class="god">
             <h3 class="categorias">Categorías</h3>
-            <button class="septimo grados" onclick="location.href=''">Séptimo grado</button>
-            <button class="primer grados" onclick="location.href=''">Primer Año</button>
-            <button class="segundo grados" onclick="location.href=''">Segundo Año</button>
-            <button class="tercer grados" onclick="location.href=''">Tercer Año</button>
-            <button class="cuarto grados" onclick="location.href=''">Cuarto Año</button>
-            <button class="quinto grados" onclick="location.href=''">Quinto Año</button>
+            <button class="grados" onclick="location.href=''">Séptimo grado</button>
+            <button class="grados" onclick="location.href=''">Primer Año</button>
+            <button class="grados" onclick="location.href=''">Segundo Año</button>
+            <button class="grados" onclick="location.href=''">Tercer Año</button>
+            <button class="grados" onclick="location.href=''">Cuarto Año</button>
+            <button class="grados" onclick="location.href=''">Quinto Año</button>
         </div>
         <button onclick="location.href='../Log-In/ML-login.html'" class="sesion">Cerrar sesion</button>
-    </div>
-    <div class="derecha">
-        <div class="arriba">
+    </aside>
+    <main>
+        <nav>
             <input id="buscador" class="buscador" type="text" placeholder="Buscá un libro"></input>
             <button onclick="location.href='../Click-Publicar-Mi-Cuenta/ML-PublicarCuenta.html'" class="cuenta">Mi cuenta</button>
-        </div>
-        <div class="articulos"> 
+        </nav>
+        <section>
             <h4 class="h4">Articulos publicados</h4>
             <div class="publicadosinvisible">
                 <div class="libros"></div>
@@ -39,8 +39,8 @@
                 <div class="libros"></div>
             </div>
             <button class="mas" onclick="location.href='../Subir-Foto/ML-Subir.html'">+</button>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 <script src="barraDeBusqueda.js"></script>
 </html>

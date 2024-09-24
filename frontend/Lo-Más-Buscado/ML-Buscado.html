@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ML-Buscado.css">
     <title>Document</title>
+    <script>
+        function subirLibro(){
+            document.getElementById("mas").style.color = "green";
+        }
+        document.getElementById("mas").addEventListener("click", subirLibro);
+    </script>
+    <style>
+        #caja{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
     <div class="columna">
@@ -38,7 +52,7 @@
                     <div class="libros"></div>
                     <div class="libros"></div>
             </div>
-            <button class="mas"onclick="location.href='../Subir-Foto/ML-Subir.html'">+</button>
+            <button class="mas" id="mas">+</button>
         </div>
     </div>
 </body>
