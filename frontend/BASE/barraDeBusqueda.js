@@ -1,4 +1,4 @@
-let publicacionesTotales = [];
+let publicacionesTotales = ["toldot 3","ingles 3"];
 let input = document.getElementById("buscador");
 // let lupita= document.getElementById("lupita"); TODO: ESTO ESTA COMENTADO PQ HAY Q CREAR EL BOTON LUPITA
 let focus = false;
