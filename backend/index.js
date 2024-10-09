@@ -61,6 +61,7 @@ function publicar(info){
     let nombre = info.nombre;
     let foto = info.foto;
     let materia = info.materia;
+    let precio = info.precio;
     let descripcion = info.descripcion;
     let año = info.año;
     let nombreDeUsuario = info.nombreDeUsuario;
@@ -71,6 +72,7 @@ function publicar(info){
         nombre:nombre,
         foto:foto,
         materia:materia,
+        precio:precio,
         descripcion:descripcion,
         año:año,
         nombreDeUsuario:nombreDeUsuario,
