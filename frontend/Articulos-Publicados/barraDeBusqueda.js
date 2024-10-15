@@ -28,3 +28,18 @@ input.addEventListener("blur",function(){
     focus = false; 
 })
 // lupita.addEventListener("click",buscar); TODO::ACA TAMBIEN, HAY QUE CREAR EL BTN DE LUPITA PARA ACTIVARLO
+
+
+
+// ESTO DE ACA ES DE PEDRI:
+const abrirModal = document.querySelector("[data-open-modal]")
+const cerrarModal = document.querySelector("[data-close-modal]")
+const modal = document.querySelector("[data-modal]")
+
+abrirModal.addEventListener("click", () => {
+    modal.showModal()
+})
+
+cerrarModal.addEventListener("click", () => {
+    modal.close()
+})

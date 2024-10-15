@@ -38,7 +38,27 @@
                 <div class="libros"></div>
                 <div class="libros"></div>
             </div>
-            <button class="mas" onclick="location.href='../Subir-Foto/ML-Subir.html'">+</button>
+            <button class="mas" data-open-modal>+</button>
+            <dialog data-modal class="graciasIvo">
+                <div class="diaGod">
+                    <div class="columnaIzquierda">
+                        <div class="arribaIzquierda">
+                            <div class="nombreAnio">
+                                <textarea type="text" class="nombreDialog inputsDialog" placeholder="Nombre"></textarea>
+                                <textarea type="number" class="anioDialog inputsDialog" placeholder="Año"></textarea>
+                            </div>
+                            <div class="cajaDesc">
+                                <textarea type="text" class="descDialog inputsDialog" placeholder="Descripción"></textarea>
+                            </div>
+                        </div>
+                        <div class="abajoIzquierda"></div>
+                    </div>
+                    <div class="columnaDerecha">
+                        
+                        <button data-close-modal></button>
+                    </div>
+                </div>
+            </dialog>
         </section>
     </main>
 </body>
