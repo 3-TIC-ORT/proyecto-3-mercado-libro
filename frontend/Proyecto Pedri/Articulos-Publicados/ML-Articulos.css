@@ -86,7 +86,7 @@ nav{
 }
 section{
     width: 90%;
-    height: 90%;
+    height: 81%;
     background-color: #D9D9D9;
     margin-top: 1%;
     font-size: 4.5vw;
@@ -104,13 +104,12 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    overflow-y: scroll;
 }
 .libros{
     background-color: #E7E7E7;
-    width: 21%;
-    height: 48%;
-    margin: 22px;
+    width: 25%;
+    height: 24%;
+    margin: 20px;
 }
 .mas{
     border-radius: 50%;
@@ -214,6 +213,4 @@ a{
     height: 80%;
     display: flex;
     align-items: flex-start;
-}
-.inputsDialog{
 }
