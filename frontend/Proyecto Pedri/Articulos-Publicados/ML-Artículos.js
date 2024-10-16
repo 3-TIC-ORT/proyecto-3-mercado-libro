@@ -1,3 +1,4 @@
+//////////////////////////////// PARTE MODAL ////////////////////////////////////
 const abrirModal = document.querySelector("[data-open-modal]")
 const cerrarModal = document.querySelector("[data-close-modal]")
 const modal = document.querySelector("[data-modal]")
@@ -10,6 +11,7 @@ cerrarModal.addEventListener("click", () => {
     modal.close()
 })
 
+//////////////////////////////// PARTE GENERACIÓN DE LISTAS ////////////////////////////////////
 
 let lista = [{nombre: "toldot 3", precio: "$12.000"},{nombre: "toldot 4", precio: "$14.000"},{nombre: "toldot 2", precio: "$10.000"},{nombre: "toldot 3", precio: "$12.000"},{nombre: "toldot 3", precio: "$12.000"},{nombre: "toldot 3", precio: "$12.000"}];
 let publicados = document.getElementById("publicadosinvisible");
