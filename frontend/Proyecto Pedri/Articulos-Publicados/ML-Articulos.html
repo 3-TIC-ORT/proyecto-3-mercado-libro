@@ -40,21 +40,38 @@
                         <div class="arribaIzquierda">
                             <div class="nombreAnio">
                                 <textarea type="text" class="nombreDialog inputsDialog" placeholder="Nombre"></textarea>
-                                <textarea type="text" class="anioDialog inputsDialog" placeholder="Año"></textarea>
+                                <select type="text" class="anioDialog inputsDialog">
+                                    <option value="" disabled selected>Año</option>
+                                    <option value="">Séptimo grado</option>
+                                    <option value="">Primer año</option>
+                                    <option value="">Segundo año</option>
+                                    <option value="">Tercer año</option>
+                                    <option value="">Cuarto año</option>
+                                    <option value="">Quinto año</option>
+                                    <option value="">Inglés</option>
+                                </select>
                             </div>
                             <div class="cajaDesc">
                                 <textarea type="text" class="descDialog inputsDialog" placeholder="Descripción"></textarea>
                             </div>
                         </div>
                         <div class="abajoIzquierda">
-                            <textarea class="materiaDialog inputsDialog"></textarea>
-                            <textarea class="mailDialog inputsDialog"></textarea>
-                            <textarea class="numDialog inputsDialog"></textarea>
+                            <select class="materiaDialog inputsDialog">
+                                <option value="" disabled selected>Materia</option>
+                                <option value="">Mate</option>
+                            </select>
+                            <textarea class="mailDialog inputsDialog" placeholder="Mail"></textarea>
+                            <textarea class="numDialog inputsDialog" placeholder="Número de teléfono"></textarea>
                         </div>
                     </div>
                     <div class="columnaDerecha">
-                        
-                        <button data-close-modal></button>
+                        <div class="subirImagen">
+                            <input type="file" id="upload" accept="image/*" style="display: none;" onchange="displayImageName()"/>
+                            <button class="botonImagen" id="nombreImagen" type="button" onclick="document.getElementById('upload').click();">+</button>
+                        </div>
+                        <div class="cajitaBoton">
+                            <button class="cerrarModal" data-close-modal>Publicar</button>
+                        </div>
                     </div>
                 </div>
             </dialog>

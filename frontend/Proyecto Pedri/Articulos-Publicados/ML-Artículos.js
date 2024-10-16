@@ -86,3 +86,11 @@ btnCerrarSesion.addEventListener("click",()=>{
     location.href = '../Log-In/ML-login.html'
 })
 
+
+//////////////////////////////// PARTE SUBIDA DE IMÁGENES ////////////////////////////////////
+
+function displayImageName() {
+    var fileInput = document.getElementById('upload');
+    var fileName = fileInput.files[0] ? fileInput.files[0].name : "Ninguna imagen seleccionada";
+    document.getElementById('nombreImagen').textContent = fileName;
+}
