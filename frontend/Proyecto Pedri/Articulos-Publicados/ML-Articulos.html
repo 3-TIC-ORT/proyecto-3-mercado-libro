@@ -27,22 +27,7 @@
         </nav>
         <section>
             <h4 class="h4">Articulos publicados</h4>
-            <div class="publicadosinvisible">
-                <div class="libros">
-                    <div class="imagen"></div>
-                    <div class="info">
-                        <h6 class="nombre">Nombre del libro</h6>
-                        <h6 class="precio">precio</h6>
-                    </div>
-                </div>
-                <div class="libros"></div>
-                <div class="libros"></div>
-                <div class="libros"></div>
-                <div class="libros"></div>
-                <div class="libros"></div>
-                <div class="libros"></div>
-                <div class="libros"></div>
-                <div class="libros"></div>
+            <div class="publicadosinvisible" id="publicadosinvisible">
             </div>
             <button class="mas" data-open-modal>+</button>
             <dialog data-modal class="graciasIvo">
@@ -51,13 +36,17 @@
                         <div class="arribaIzquierda">
                             <div class="nombreAnio">
                                 <textarea type="text" class="nombreDialog inputsDialog" placeholder="Nombre"></textarea>
-                                <textarea type="number" class="anioDialog inputsDialog" placeholder="Año"></textarea>
+                                <textarea type="text" class="anioDialog inputsDialog" placeholder="Año"></textarea>
                             </div>
                             <div class="cajaDesc">
                                 <textarea type="text" class="descDialog inputsDialog" placeholder="Descripción"></textarea>
                             </div>
                         </div>
-                        <div class="abajoIzquierda"></div>
+                        <div class="abajoIzquierda">
+                            <textarea class="materiaDialog inputsDialog"></textarea>
+                            <textarea class="mailDialog inputsDialog"></textarea>
+                            <textarea class="numDialog inputsDialog"></textarea>
+                        </div>
                     </div>
                     <div class="columnaDerecha">
                         
@@ -69,4 +58,5 @@
     </main>
 </body>
 <script src="../BASE/barraDeBusqueda.js"></script>
+<script src="ML-Artículos.js"></script>
 </html>

@@ -62,7 +62,7 @@ nav{
 }
 .buscador{
     width: 60vw;
-    height: 70%;
+    height: 6vh;
     font-size: 155%;
     background-color: #D9D9D9;
     border: 0;
@@ -71,7 +71,7 @@ nav{
 }
 .cuenta{
     width: 8vw;
-    height: 70%;
+    height: 6vh;
     font-size: 110%;
     background-color: #D9D9D9;
     border: 0;
@@ -86,7 +86,7 @@ nav{
 }
 section{
     width: 90%;
-    height: 81%;
+    height: 90%;
     background-color: #D9D9D9;
     margin-top: 1%;
     font-size: 4.5vw;
@@ -104,27 +104,50 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    overflow-y: scroll;
 }
 .libros{
     background-color: #E7E7E7;
-    width: 25%;
-    height: 24%;
-    margin: 20px;
+    width: 21%; 
+    aspect-ratio: 1 / 1.2;
+    margin: 2.5%;
+    box-sizing: border-box;
+}
+.imagen{
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+    border-bottom: 0.5vh solid black;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+.nombre{
+    font-size: 60%;
+    text-align: center;
+    margin: 5% 0;
+}
+.precio{
+    font-size: 40%;
+    text-align: center;
+    margin-bottom: 2%;
 }
 .mas{
+    width: 5vw;
+    height: 5vw;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    position: fixed;
+    right: 2vw;
+    bottom: 3vh;
     background-color: rgb(101, 101, 233);
+    border: 0.5vh solid #ffffff;
+    box-sizing: border-box;
+    font-size: 100%;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    border: 3px solid white;
-    font-size: 70px;
-    color: white;
 }
 .mas:hover{
     background-color: rgb(121, 121, 233);
@@ -177,12 +200,11 @@ a{
 }
 .anioDialog{
     height: 45%;
-    width: 15%;
+    width: 20%;
 }
 .cajaDesc{
     width: 100%;
     height: 60%;
-    background-color: purple;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,6 +212,29 @@ a{
 .descDialog{
     width: 90%;
     height: 80%;
+}
+.inputsDialog{
+    resize: none;
+    font-size: 40%;
+}
+.abajoIzquierda{
+    height: 50%;
+    width: 100%;
+    background-color: purple;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.materiaDialog{
+    width: 90%;
+    height: 20%;
+}
+.mailDialog{
+    width: 90%;
+    height: 20%;
+}
+.numDialog{
+    width: 90%;
+    height: 20%;
 }
