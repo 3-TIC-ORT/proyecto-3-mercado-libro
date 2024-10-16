@@ -86,6 +86,7 @@ function publicar(info){
     return true
 }
 
+
 //ELIMINAR PUBLICACIONES:
 onEvent("eliminar",eliminar);
 function eliminar(id){
@@ -99,5 +100,10 @@ function eliminar(id){
     }
     fs.writeFileSync("DATOS/publisSubidas.json",JSON.stringify(nuevaLista));
 }
-
+// ENVIAR LIBROS
+onEvent("pedirLibros",()=>{
+    let publicaciones = fs.readFileSync("DATOS/publisSubidas.json","utf-8");
+    publicaciones = JSON.parse(publicaciones);
+    return publicaciones
+})
 startServer();

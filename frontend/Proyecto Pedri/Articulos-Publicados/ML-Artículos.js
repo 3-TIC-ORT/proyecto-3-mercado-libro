@@ -1,3 +1,14 @@
+//////////////////////PARA VOLVER AL LOGIN SI NO SE ESTÁ REGISTRADO ///////////////////////////
+window.addEventListener("pageshow",()=>{
+    if (localStorage.getItem("user") === "-"){
+        location.href = '../Log-In/ML-login.html';
+    }
+})
+
+
+
+
+
 //////////////////////////////// PARTE MODAL ////////////////////////////////////
 const abrirModal = document.querySelector("[data-open-modal]")
 const cerrarModal = document.querySelector("[data-close-modal]")
@@ -11,16 +22,22 @@ cerrarModal.addEventListener("click", () => {
     modal.close()
 })
 
-//////////////////////////////// PARTE GENERACIÓN DE LISTAS ////////////////////////////////////
 
-let lista = [{nombre: "toldot 3", precio: "$12.000"},{nombre: "toldot 4", precio: "$14.000"},{nombre: "toldot 2", precio: "$10.000"},{nombre: "toldot 3", precio: "$12.000"},{nombre: "toldot 3", precio: "$12.000"},{nombre: "toldot 3", precio: "$12.000"}];
-let publicados = document.getElementById("publicadosinvisible");
-
-publicados.innerHTML = "";
-
-for (let i of lista){
-    publicados.innerHTML = publicados.innerHTML + `<div class="libros"><div class="imagen"><img src="https://cdn.shopify.com/s/files/1/2482/2494/files/Cuentos_de_los_hermanos_Grimm_480x480.jpg?v=1629400827" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+////////////////////////////// PARTE DE OBTENER PUBLICACIONES Y GENERACIÓN DE LIBROS /////////////////////////////
+let listaDeLibros;
+window.onload = ()=>{
+    console.log("hola");
+    fetchData("pedirLibros",(libros)=>{
+        listaDeLibros = libros;
+        console.log(listaDeLibros)
+        let publicados = document.getElementById("publicadosinvisible");
+        publicados.innerHTML = "";
+        for (let i of listaDeLibros){
+            publicados.innerHTML = publicados.innerHTML + `<div class="libros"><div class="imagen"><img src="https://cdn.shopify.com/s/files/1/2482/2494/files/Cuentos_de_los_hermanos_Grimm_480x480.jpg?v=1629400827" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+        }
+    })
 }
+<<<<<<< Updated upstream
 ////////////////////////////// PARTE FUNCIONALIDAD (PARTE DE TOMAR LOS DATOS DE LOS INPUTS Y METERLOS EN OBJETOS Y PASARSELOS AL BACK)/////
 
 document.getElementById("botonPublicar").addEventListener("click", publicar);
@@ -54,3 +71,21 @@ function publicar(){
         window.reload()
     }
 }
+=======
+
+
+
+
+
+
+
+////////////////////////// PARTE CERRAR SESIÓN //////////////////////////////////////////
+
+let btnCerrarSesion = document.getElementById("botonCerrarSesion");
+
+btnCerrarSesion.addEventListener("click",()=>{
+    localStorage.setItem("user","-");
+    location.href = '../Log-In/ML-login.html'
+})
+
+>>>>>>> Stashed changes
