@@ -88,9 +88,15 @@ btnCerrarSesion.addEventListener("click",()=>{
 
 
 //////////////////////////////// PARTE SUBIDA DE IMÁGENES ////////////////////////////////////
-
-function displayImageName() {
+let inputFile = document.getElementById("nombreImagen");
+function displayImageName(){
     var fileInput = document.getElementById('upload');
+    var fileReader = new FileReader();
+    fileReader.readAsDataURL(fileInput.files[0]);
+    fileReader.onloadend = ()=>{
+        let resultado = FileReader.result;
+    }
+
     var fileName = fileInput.files[0] ? fileInput.files[0].name : "Ninguna imagen seleccionada";
     document.getElementById('nombreImagen').textContent = fileName;
 }
