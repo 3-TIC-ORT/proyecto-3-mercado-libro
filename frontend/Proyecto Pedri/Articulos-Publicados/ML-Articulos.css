@@ -93,6 +93,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
 }
 .h4{
     margin-top: 1.5%;
@@ -107,23 +108,23 @@ section{
 }
 .libros{
     background-color: #E7E7E7;
-    width: 25%;
-    height: 24%;
-    margin: 20px;
+    width: 22%;
+    aspect-ratio: 1/1;
+    margin: 2%;
 }
 .mas{
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 6vw;
+    aspect-ratio: 1 / 1;
     background-color: rgb(101, 101, 233);
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    right: 20px;
-    bottom: 20px;
-    border: 3px solid white;
-    font-size: 70px;
+    right: 2%;
+    bottom: 3%;
+    border: 0.5vh solid white;
+    font-size: 120%;
     color: white;
 }
 .mas:hover{
@@ -177,7 +178,7 @@ a{
 }
 .anioDialog{
     height: 45%;
-    width: 15%;
+    width: 20%;
 }
 .cajaDesc{
     width: 100%;
@@ -192,4 +193,8 @@ a{
     height: 80%;
     display: flex;
     align-items: flex-start;
+}
+.inputsDialog{
+    resize: none;
+    font-size: 40%;
 }
