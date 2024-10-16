@@ -35,29 +35,29 @@
                     <div class="columnaIzquierda">
                         <div class="arribaIzquierda">
                             <div class="nombreAnio">
-                                <textarea type="text" class="nombreDialog inputsDialog" placeholder="Nombre"></textarea>
-                                <select type="text" class="anioDialog inputsDialog">
+                                <textarea id="nombre" class="nombreDialog inputsDialog" placeholder="Nombre"></textarea>
+                                <select id="año" class="anioDialog inputsDialog">
                                     <option value="" disabled selected>Año</option>
-                                    <option value="">Séptimo grado</option>
-                                    <option value="">Primer año</option>
-                                    <option value="">Segundo año</option>
-                                    <option value="">Tercer año</option>
-                                    <option value="">Cuarto año</option>
-                                    <option value="">Quinto año</option>
-                                    <option value="">Inglés</option>
+                                    <option value="Séptimo grado">Séptimo grado</option>
+                                    <option value="Primer año">Primer año</option>
+                                    <option value="Segundo año">Segundo año</option>
+                                    <option value="Tercer año">Tercer año</option>
+                                    <option value="Cuarto año">Cuarto año</option>
+                                    <option value="Quinto año">Quinto año</option>
+                                    <option value="Inglés">Inglés</option>
                                 </select>
                             </div>
                             <div class="cajaDesc">
-                                <textarea type="text" class="descDialog inputsDialog" placeholder="Descripción"></textarea>
+                                <textarea id="descripcion" type="text" class="descDialog inputsDialog" placeholder="Descripción"></textarea>
                             </div>
                         </div>
                         <div class="abajoIzquierda">
-                            <select class="materiaDialog inputsDialog">
+                            <select id="materia" class="materiaDialog inputsDialog">
                                 <option value="" disabled selected>Materia</option>
-                                <option value="">Mate</option>
+                                <option value="Mate">Mate</option>
                             </select>
-                            <textarea class="mailDialog inputsDialog" placeholder="Mail"></textarea>
-                            <textarea class="numDialog inputsDialog" placeholder="Número de teléfono"></textarea>
+                            <textarea id="mail" class="mailDialog inputsDialog" placeholder="Mail"></textarea>
+                            <textarea id="numero" class="numDialog inputsDialog" placeholder="Número de teléfono"></textarea>
                         </div>
                     </div>
                     <div class="columnaDerecha">
@@ -66,7 +66,7 @@
                             <button class="botonImagen" id="nombreImagen" type="button" onclick="document.getElementById('upload').click();">+</button>
                         </div>
                         <div class="cajitaBoton">
-                            <button class="cerrarModal" data-close-modal>Publicar</button>
+                            <button id="botonPublicar" class="cerrarModal" data-close-modal>Publicar</button>
                         </div>
                     </div>
                 </div>

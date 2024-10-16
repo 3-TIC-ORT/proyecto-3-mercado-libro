@@ -18,9 +18,6 @@ abrirModal.addEventListener("click", () => {
     modal.showModal()
 })
 
-cerrarModal.addEventListener("click", () => {
-    modal.close()
-})
 
 
 ////////////////////////////// PARTE DE OBTENER PUBLICACIONES Y GENERACIÓN DE LIBROS /////////////////////////////
@@ -51,7 +48,7 @@ function publicar(){
     let nombreDeUsuario = localStorage.getItem("user");
     let mail = document.getElementById("mail");
     let numero = document.getElementById("numero");
-    if( nombre.value === "" || imagen.value === "" || materia.value === "" || precio.value === "" || descripcion.value === "" || año.value === "" || nombreDeUsuario.value === "" || mail.value === "" || numero.value === ""){
+    if( nombre.value === "" || materia.value === "" || precio.value === "" || descripcion.value === "" || año.value === "" || mail.value === "" || numero.value === ""){
         alert("Es necesario completar todos los campos para poder publicar");
     }
     else{
@@ -66,6 +63,7 @@ function publicar(){
             "mail": mail.value,
             "numero": numero.value
         }
+        modal.close()
         postData("publicar",publicacion);
         window.reload()
     }
