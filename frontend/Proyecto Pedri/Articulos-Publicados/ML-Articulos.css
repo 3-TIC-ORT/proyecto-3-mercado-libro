@@ -109,15 +109,9 @@ section{
 }
 .libros{
     background-color: #E7E7E7;
-<<<<<<< Updated upstream
-    width: 22%;
-    aspect-ratio: 1/1;
-    margin: 2%;
-=======
     width: 21%;
     height: 48%;
     margin: 22px;
->>>>>>> Stashed changes
 }
 .mas{
     border-radius: 50%;
