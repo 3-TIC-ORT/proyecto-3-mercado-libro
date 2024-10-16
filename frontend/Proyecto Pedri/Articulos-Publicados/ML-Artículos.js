@@ -37,7 +37,6 @@ window.onload = ()=>{
         }
     })
 }
-<<<<<<< Updated upstream
 ////////////////////////////// PARTE FUNCIONALIDAD (PARTE DE TOMAR LOS DATOS DE LOS INPUTS Y METERLOS EN OBJETOS Y PASARSELOS AL BACK)/////
 
 document.getElementById("botonPublicar").addEventListener("click", publicar);
@@ -71,7 +70,6 @@ function publicar(){
         window.reload()
     }
 }
-=======
 
 
 
@@ -88,4 +86,3 @@ btnCerrarSesion.addEventListener("click",()=>{
     location.href = '../Log-In/ML-login.html'
 })
 
->>>>>>> Stashed changes
