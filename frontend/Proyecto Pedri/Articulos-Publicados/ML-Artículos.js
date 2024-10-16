@@ -21,10 +21,11 @@ publicados.innerHTML = "";
 for (let i of lista){
     publicados.innerHTML = publicados.innerHTML + `<div class="libros"><div class="imagen"><img src="https://cdn.shopify.com/s/files/1/2482/2494/files/Cuentos_de_los_hermanos_Grimm_480x480.jpg?v=1629400827" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
 }
-//////////////////////////////FUNCIONALIDAD (PARTE DE TOMAR LOS DATOS DE LOS INPUTS Y METERLOS EN OBJETOS Y PASARSELOS AL BACK)/////
+////////////////////////////// PARTE FUNCIONALIDAD (PARTE DE TOMAR LOS DATOS DE LOS INPUTS Y METERLOS EN OBJETOS Y PASARSELOS AL BACK)/////
 
 document.getElementById("botonPublicar").addEventListener("click", publicar);
-function publicar(){
+function publicar(){ 
+    // TODO: PEDRO ACA ESTAN TODOS LOS IDS QUE TENES QUE PONER. Tambien tenes que agregar el boton publicar id: botonPublicar 
     let nombre = document.getElementById("nombre");
     let imagen = document.getElementById("imagen");
     let materia = document.getElementById("materia");
