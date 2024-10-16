@@ -12,6 +12,9 @@ function buscar(){
             publicacionesValidas.push(i);
         }
     }
+    if(publicacionesValidas.length === 0){
+        console.log("no se encontraron coincidencias")
+    }
     console.log(publicacionesValidas)
 }
 
