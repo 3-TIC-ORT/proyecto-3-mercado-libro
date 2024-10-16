@@ -62,7 +62,7 @@ nav{
 }
 .buscador{
     width: 60vw;
-    height: 70%;
+    height: 6vh;
     font-size: 155%;
     background-color: #D9D9D9;
     border: 0;
@@ -71,7 +71,7 @@ nav{
 }
 .cuenta{
     width: 8vw;
-    height: 70%;
+    height: 6vh;
     font-size: 110%;
     background-color: #D9D9D9;
     border: 0;
@@ -93,7 +93,6 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
 }
 .h4{
     margin-top: 1.5%;
@@ -109,30 +108,46 @@ section{
 }
 .libros{
     background-color: #E7E7E7;
-<<<<<<< Updated upstream
-    width: 22%;
-    aspect-ratio: 1/1;
-    margin: 2%;
-=======
-    width: 21%;
-    height: 48%;
-    margin: 22px;
->>>>>>> Stashed changes
+    width: 21%; 
+    aspect-ratio: 1 / 1.2;
+    margin: 2.5%;
+    box-sizing: border-box;
+}
+.imagen{
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+    border-bottom: 0.5vh solid black;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+.nombre{
+    font-size: 60%;
+    text-align: center;
+    margin: 5% 0;
+}
+.precio{
+    font-size: 40%;
+    text-align: center;
+    margin-bottom: 2%;
 }
 .mas{
+    width: 5vw;
+    height: 5vw;
     border-radius: 50%;
-    width: 6vw;
-    aspect-ratio: 1 / 1;
+    position: fixed;
+    right: 2vw;
+    bottom: 3vh;
     background-color: rgb(101, 101, 233);
+    border: 0.5vh solid #ffffff;
+    box-sizing: border-box;
+    font-size: 100%;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    right: 2%;
-    bottom: 3%;
-    border: 0.5vh solid white;
-    font-size: 120%;
-    color: white;
 }
 .mas:hover{
     background-color: rgb(121, 121, 233);
@@ -170,27 +185,6 @@ a{
     display: flex;
     flex-direction: column;
 }
-.imagen{
-    height: 150px;
-    width: 100%;
-    background-color: #d45858;
-    object-fit: contain;
-}
-.img{
-    width: 100%;
-    height: 100%;
-    border-bottom: 3px solid black;
-}
-.nombre{
-    margin-top: 5px;
-    text-align: center;
-    font-size: 25px;
-}
-.precio{
-    font-size: 25px;
-    text-align: center;
-}
-
 .nombreAnio{
     width: 100%;
     height: 40%;
@@ -211,7 +205,6 @@ a{
 .cajaDesc{
     width: 100%;
     height: 60%;
-    background-color: purple;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,10 +212,29 @@ a{
 .descDialog{
     width: 90%;
     height: 80%;
-    display: flex;
-    align-items: flex-start;
 }
 .inputsDialog{
     resize: none;
     font-size: 40%;
+}
+.abajoIzquierda{
+    height: 50%;
+    width: 100%;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.materiaDialog{
+    width: 90%;
+    height: 20%;
+}
+.mailDialog{
+    width: 90%;
+    height: 20%;
+}
+.numDialog{
+    width: 90%;
+    height: 20%;
 }
