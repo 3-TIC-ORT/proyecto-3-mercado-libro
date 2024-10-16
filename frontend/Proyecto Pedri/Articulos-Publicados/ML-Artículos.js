@@ -37,6 +37,7 @@ window.onload = ()=>{
         }
     })
 }
+<<<<<<< Updated upstream
 ////////////////////////////// PARTE FUNCIONALIDAD (PARTE DE TOMAR LOS DATOS DE LOS INPUTS Y METERLOS EN OBJETOS Y PASARSELOS AL BACK)/////
 
 document.getElementById("botonPublicar").addEventListener("click", publicar);
@@ -86,3 +87,13 @@ btnCerrarSesion.addEventListener("click",()=>{
     location.href = '../Log-In/ML-login.html'
 })
 
+=======
+
+//////////////////////////////// PARTE SUBIDA DE IMÁGENES ////////////////////////////////////
+
+function displayImageName() {
+    var fileInput = document.getElementById('upload');
+    var fileName = fileInput.files[0] ? fileInput.files[0].name : "Ninguna imagen seleccionada";
+    document.getElementById('nombreImagen').textContent = fileName;
+}
+>>>>>>> Stashed changes
