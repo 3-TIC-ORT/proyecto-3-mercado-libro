@@ -1,11 +1,11 @@
 //////////////////////PARA VOLVER AL LOGIN SI NO SE ESTÁ REGISTRADO ///////////////////////////
 window.addEventListener("pageshow",()=>{
-    if (localStorage.getItem("user") === "-"){
-        location.href = '../Log-In/ML-login.html';
-    }
+    window.reload()
 })
 
-
+if (localStorage.getItem("user") === "-"){
+    location.href = '../Log-In/ML-login.html';
+}
 
 
 

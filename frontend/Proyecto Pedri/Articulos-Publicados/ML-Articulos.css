@@ -111,10 +111,18 @@ section{
 }
 .libros{
     background-color: #E7E7E7;
-    width: 21%; 
+    width: 16vw; 
     aspect-ratio: 1 / 1.2;
     margin: 2.5%;
     box-sizing: border-box;
+    max-height: 45vh;
+    transition: 0.2s all;
+}
+.libros:hover{
+    background-color: #cacaca;
+    border-radius: 9px;
+    outline: 4px solid black;
+    cursor: pointer;
 }
 .imagen{
     width: 100%;
