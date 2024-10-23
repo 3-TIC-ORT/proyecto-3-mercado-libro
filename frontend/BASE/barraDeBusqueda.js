@@ -31,3 +31,4 @@ input.addEventListener("blur",function(){
     focus = false; 
 })
 // lupita.addEventListener("click",buscar); TODO::ACA TAMBIEN, HAY QUE CREAR EL BTN DE LUPITA PARA ACTIVARLO
+//FILTRADOOO
