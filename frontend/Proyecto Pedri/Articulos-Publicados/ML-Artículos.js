@@ -30,7 +30,7 @@ window.onload = ()=>{
         let publicados = document.getElementById("publicadosinvisible");
         publicados.innerHTML = "";
         for (let i of listaDeLibros){
-            publicados.innerHTML = publicados.innerHTML + `<div class="libros"><div class="imagen"><img src="https://cdn.shopify.com/s/files/1/2482/2494/files/Cuentos_de_los_hermanos_Grimm_480x480.jpg?v=1629400827" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+            publicados.innerHTML = publicados.innerHTML + `<div class="libros"><div class="imagen"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShaWwHk25rOFdbzWhtU8iT7A1IIBJandpDVg&s" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
         }
     })
 }
@@ -47,16 +47,16 @@ function publicar(){
     let año = document.getElementById("año");
     let nombreDeUsuario = localStorage.getItem("user");
     let mail = document.getElementById("mail");
-    let numero = document.getElementById("numero");
-    if( nombre.value === "" || materia.value === "" || precio.value === "" || descripcion.value === "" || año.value === "" || mail.value === "" || numero.value === ""){
+    let numero = document.getElementById("numero");// TODO: Agregar comparación de precio e imagen
+    if( nombre.value === "" || materia.value === "" || descripcion.value === "" || año.value === "" || mail.value === ""){
         alert("Es necesario completar todos los campos para poder publicar");
     }
     else{
         let publicacion = {
             "nombre": nombre.value,
-            "imagen": imagen.value,
+            "imagen": "SIUUU", //TODO: Agregar link img
             "materia": materia.value,
-            "precio": precio.value,
+            "precio": "SIUUUU", //TODO: Agregar precio posta cuando esté en el css
             "descripcion": descripcion.value,
             "año": año.value,
             "nombreDeUsuario": nombreDeUsuario.value,
