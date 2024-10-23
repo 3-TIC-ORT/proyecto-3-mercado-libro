@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ML-Articulos.css">
+    <link rel="stylesheet" href="misPublicaciones.css">
     <title>Document</title>
 </head>
 <body>
@@ -27,10 +27,10 @@
     <main>
         <nav>
             <input id="buscador" class="buscador" type="text" placeholder="Buscá un libro"></input>
-            <button onclick="location.href='../Mis Publicaciones/misPublicaciones.html'" class="cuenta">Mis libros</button>
+            <button id="Volver" onclick="location.href='../Articulos-Publicados/ML-Articulos.html'" class="cuenta">Volver</button>
         </nav>
         <section>
-            <h4 class="h4">Articulos publicados</h4>
+            <h4 class="h4">Mis publicaciones</h4>
             <div class="publicadosinvisible" id="publicadosinvisible">
             </div>
             <button class="mas" data-open-modal>+</button>
@@ -80,6 +80,6 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
 <script src="../../BASE/socket.js"></script>
+<script src="misPublicaciones.js"></script>
 <script src="../../BASE/barraDeBusqueda.js"></script>
-<script src="ML-Artículos.js"></script>
 </html>
