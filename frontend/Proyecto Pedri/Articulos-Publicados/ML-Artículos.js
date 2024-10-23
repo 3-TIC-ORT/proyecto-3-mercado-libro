@@ -56,7 +56,7 @@ function publicar(){
             "nombre": nombre.value.charAt(0).toUpperCase() + nombre.value.slice(1).toLowerCase(),
             "foto": resultado,
             "materia": materia.value,
-            "precio": "$"+"precio.value", //TODO: Agregar precio posta cuando esté en el css
+            "precio": "$"+ precio.value, //TODO: Agregar precio posta cuando esté en el css
             "descripcion": descripcion.value,
             "año": año.value,
             "nombreDeUsuario": localStorage.getItem("user"),
