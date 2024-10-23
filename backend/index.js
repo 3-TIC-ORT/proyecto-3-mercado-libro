@@ -81,7 +81,7 @@ function publicar(info){
         id:numerito
     }
 
-    leido.push(datos);
+    leido.unshift(datos);
     fs.writeFileSync("DATOS/publisSubidas.json",JSON.stringify(leido));
     return true
 }
