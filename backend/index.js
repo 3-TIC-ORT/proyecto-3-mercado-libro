@@ -104,6 +104,17 @@ function eliminar(id){
 onEvent("pedirLibros",()=>{
     let publicaciones = fs.readFileSync("DATOS/publisSubidas.json","utf-8");
     publicaciones = JSON.parse(publicaciones);
-    return publicaciones
+    return publicaciones;
+})
+onEvent("pedirMisLibros",(user)=>{
+    let publicaciones = fs.readFileSync("DATOS/publisSubidas.json","utf-8");
+    publicaciones = JSON.parse(publicaciones);
+    let misLibros = [];
+    publicaciones.forEach(element => {
+        if(element.nombreDeUsuario === user){
+            misLibros.push(element);
+        }
+    });
+    return misLibros;
 })
 startServer();
