@@ -3,7 +3,7 @@ window.addEventListener("pageshow",()=>{
     window.reload()
 })
 
-if (localStorage.getItem("user") === "-"){
+if (localStorage.getItem("user") === "-" || localStorage.getItem("user") == null){
     location.href = '../Log-In/ML-login.html';
 }
 
@@ -59,7 +59,7 @@ function publicar(){
             "precio": "SIUUUU", //TODO: Agregar precio posta cuando esté en el css
             "descripcion": descripcion.value,
             "año": año.value,
-            "nombreDeUsuario": nombreDeUsuario.value,
+            "nombreDeUsuario": localStorage.getItem("user"),
             "mail": mail.value,
             "numero": numero.value
         }
