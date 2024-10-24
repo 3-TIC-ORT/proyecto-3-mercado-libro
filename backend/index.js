@@ -99,6 +99,7 @@ function eliminar(id){
         }
     }
     fs.writeFileSync("DATOS/publisSubidas.json",JSON.stringify(nuevaLista));
+    return
 }
 // ENVIAR LIBROS
 onEvent("pedirLibros",()=>{
