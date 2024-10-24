@@ -6,6 +6,24 @@ function registrarse(info){
     let nombre = info.usuario;
     let email = info.mail;
     let contraseña = info.contraseña;
+    let usuarios = JSON.parse(fs.readFileSync("DATOS/usuarios.json","utf-8"));
+    let nombreDisponible = true;
+    let emailDisponible = true;
+    for (let i of usuarios){
+        if(nombre === i.nombre){
+            nombreDisponible = false;
+        }
+        if (email === i.email){
+            emailDisponible = false;
+        }
+    }
+    if(nombreDisponible === false){
+        return {ok:false, msg:"Ese nombre ya está en uso."}
+    }
+    if(emailDisponible === false){
+        return {ok:false, msg:"Ese email ya está en uso."}
+    }
+
     if (nombre.length > 3 && contraseña.length > 3){
         if (email.endsWith(".com") && email.includes("@") && !email.startsWith("@")){
 
@@ -13,7 +31,6 @@ function registrarse(info){
             user.nombre = nombre;
             user.contraseña = contraseña;
             user.email = email;
-            let usuarios = JSON.parse(fs.readFileSync("DATOS/usuarios.json","utf-8"));
             usuarios.push(user);
             fs.writeFileSync("DATOS/usuarios.json",JSON.stringify(usuarios));
             return {ok:true, user: user.nombre};

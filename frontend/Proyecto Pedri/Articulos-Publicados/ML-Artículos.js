@@ -1,7 +1,7 @@
 let resultado = "";
 //////////////////////PARA VOLVER AL LOGIN SI NO SE ESTÁ REGISTRADO ///////////////////////////
 window.addEventListener("pageshow",()=>{
-    window.reload()
+    document.reload()
 })
 
 if (localStorage.getItem("user") === "-" || localStorage.getItem("user") == null){

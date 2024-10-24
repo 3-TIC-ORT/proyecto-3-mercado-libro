@@ -3,6 +3,12 @@ let usuario = document.getElementById("usuario");
 let contraseña = document.getElementById("contraseña");
 
 
+window.addEventListener("pageshow",()=>{
+    document.reload()
+})
+
+
+
 function receiveLogin(info){
     if (info.ok === true){
         console.log(`Bienvenido, ${info.user}`);
