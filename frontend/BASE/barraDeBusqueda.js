@@ -64,9 +64,30 @@ function crearLibros(libros){
     console.log(listaDeLibros)
     let publicados = document.getElementById("publicadosinvisible");
     publicados.innerHTML = "";
-    for (let i of listaDeLibros){
-        publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+    let condiciones = JSON.parse(localStorage.getItem("condiciones"))
+    if (Object.hasOwn(condiciones,"nombreDeUsuario")){
+        for (let i of listaDeLibros){
+            publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="eliminar" id="${i.id + "-"}"><img src="bote-de-basura.png" class="tacho"></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+            
+        }
+        let botones = document.querySelectorAll(".eliminar")
+        for (let i of botones){
+            i.addEventListener("click",()=>{
+                let elID = ""
+                for(let w of i.id){
+                    if (w != "-"){
+                        elID += w;
+                    }
+                }
+                postData("eliminar",elID,()=>{document.reload()})
+            })
+        }
+    }else{
+        for (let i of listaDeLibros){
+            publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+        }
     }
+    
 }
 
 

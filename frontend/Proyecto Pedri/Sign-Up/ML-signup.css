@@ -53,6 +53,10 @@ margin-top: -70px;
 border: 0;
 background-color: #d2f2ff;
 }
+.login:hover{
+    background-color: #98e2ff;
+    cursor: pointer;
+}
 .registrate{
     margin-top: -80px;
     margin-bottom: -20px;

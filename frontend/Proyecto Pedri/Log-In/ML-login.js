@@ -15,7 +15,10 @@ function receiveLogin(info){
         localStorage.setItem("user",info.user);
         location.href = "../Articulos-Publicados/ML-Articulos.html";
     }else{
-        console.log("Usuario o contraseña incorrectos");
+        usuario.style.outline = "3px solid #8f0707"
+        contraseña.style.outline = "3px solid #8f0707"
+        contraseña.value = "";
+        contraseña.placeholder = "Usuario o contraseña incorrectos"
     }
 }
 
