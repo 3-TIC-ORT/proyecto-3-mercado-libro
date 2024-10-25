@@ -13,6 +13,10 @@ for(let i of botonesGrados){
     i.addEventListener("click",()=>{
         let condiciones = JSON.parse(localStorage.getItem("condiciones"))
         condiciones["año"] = i.textContent;
+        if (Object.hasOwn(condiciones,"materia")){
+            delete condiciones["materia"];
+        }
+        console.log(condiciones)
         localStorage.setItem("condiciones",JSON.stringify(condiciones))
     })
 }
