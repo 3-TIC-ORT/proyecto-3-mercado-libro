@@ -135,4 +135,26 @@ onEvent("pedirMisLibros",(user)=>{
     });
     return misLibros;
 })
+
+onEvent("buscador",(condiciones)=>{
+    console.log("busqueda")
+    let publicaciones = fs.readFileSync("DATOS/publisSubidas.json","utf-8");
+    publicaciones = JSON.parse(publicaciones);
+    let listaDePublis = [];
+    for(let i of publicaciones){
+        let keys = Object.keys(condiciones);
+        let confirmaciones = [];
+        for (let w of keys){
+            if (i[w] === condiciones[w]){
+                confirmaciones.push(true);
+            }
+        }
+        if (confirmaciones.length === keys.length){
+            listaDePublis.push(i);
+        }
+    }
+    return listaDePublis;
+})
+
+
 startServer();

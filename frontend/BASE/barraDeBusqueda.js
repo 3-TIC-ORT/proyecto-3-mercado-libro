@@ -1,27 +1,50 @@
-let publicacionesTotales = ["toldot 3","ingles 3"];
 let input = document.getElementById("buscador");
+let publicadosinvisible = document.getElementById("publicadosinvisible")
+
+localStorage.setItem("condiciones",JSON.stringify({}))
+window.addEventListener("pageshow",()=>{
+    document.reload()
+})
+
+//CONDICIONES EN EL LOCALSTORAGE
+let botonesGrados = document.querySelectorAll(".grados")
+
+for(let i of botonesGrados){
+    i.addEventListener("click",()=>{
+        let condiciones = JSON.parse(localStorage.getItem("condiciones"))
+        condiciones["año"] = i.textContent;
+        localStorage.setItem("condiciones",JSON.stringify(condiciones))
+    })
+}
+
+
 // let lupita= document.getElementById("lupita"); TODO: ESTO ESTA COMENTADO PQ HAY Q CREAR EL BOTON LUPITA
 let focus = false;
 let publicacionesValidas = [];
 
 // esta funcion se llama al presionar "enter", posteriormente tambien el boton buscar
-function buscar(){
+function buscar1(){
+    let condiciones = JSON.parse(localStorage.getItem("condiciones"))
+    postData("buscador",condiciones,buscar2)
+}
+
+function buscar2(publicacionesTotales){
     publicacionesValidas = [];
     for(let i of publicacionesTotales){
-        if(i.includes(input.value)){
+        if(i.nombre.toLowerCase().includes(input.value.toLowerCase())){
             publicacionesValidas.push(i);
         }
     }
     if(publicacionesValidas.length === 0){
         console.log("no se encontraron coincidencias")
     }
-    console.log(publicacionesValidas)
+    crearLibros(publicacionesValidas)
 }
 
 //todo esto sirve para que al presionar enter se llame a la funcion
 input.addEventListener("keydown",function(event){
     if(event.key=== "Enter" && focus){
-        buscar();
+        buscar1();
     }
 });
 input.addEventListener("focus",function(){
@@ -32,3 +55,14 @@ input.addEventListener("blur",function(){
 })
 // lupita.addEventListener("click",buscar); TODO::ACA TAMBIEN, HAY QUE CREAR EL BTN DE LUPITA PARA ACTIVARLO
 //FILTRADOOO
+function crearLibros(libros){
+    listaDeLibros = libros;
+    console.log(listaDeLibros)
+    let publicados = document.getElementById("publicadosinvisible");
+    publicados.innerHTML = "";
+    for (let i of listaDeLibros){
+        publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+    }
+}
+
+
