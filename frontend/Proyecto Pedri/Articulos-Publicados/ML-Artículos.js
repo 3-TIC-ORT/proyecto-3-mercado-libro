@@ -26,14 +26,19 @@ let listaDeLibros;
 window.onload = ()=>{
     console.log("hola");
     fetchData("pedirLibros",(libros)=>{
-        listaDeLibros = libros;
-        console.log(listaDeLibros)
-        let publicados = document.getElementById("publicadosinvisible");
-        publicados.innerHTML = "";
-        for (let i of listaDeLibros){
-            publicados.innerHTML = publicados.innerHTML + `<div class="libros"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
-        }
+        crearLibros(libros)
     })
+}
+
+
+function crearLibros(libros){
+    listaDeLibros = libros;
+    console.log(listaDeLibros)
+    let publicados = document.getElementById("publicadosinvisible");
+    publicados.innerHTML = "";
+    for (let i of listaDeLibros){
+        publicados.innerHTML = publicados.innerHTML + `<div class="libros"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+    }
 }
 ////////////////////////////// PARTE FUNCIONALIDAD (PARTE DE TOMAR LOS DATOS DE LOS INPUTS Y METERLOS EN OBJETOS Y PASARSELOS AL BACK)/////
 
@@ -48,7 +53,7 @@ function publicar(){
     let nombreDeUsuario = localStorage.getItem("user");
     let mail = document.getElementById("mail");
     let numero = document.getElementById("numero");// TODO: Agregar comparación de precio
-    if( nombre.value === "" || materia.value === "" || descripcion.value === "" || año.value === "" || mail.value === "" || resultado === ""){
+    if( nombre.value === "" || materia.value === "" || descripcion.value === "" || año.value === "" || mail.value === "" || resultado === "" || numero.value === ""){
         alert("Es necesario completar todos los campos para poder publicar");
     }
     else{

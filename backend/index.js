@@ -73,7 +73,7 @@ function publicar(info){
     if(leido.length===0){
         numerito=0;
     }else{
-        numerito= leido[leido.length-1].id + 1;
+        numerito= leido[0].id + 1;
     }
     let nombre = info.nombre;
     let foto = info.foto;
