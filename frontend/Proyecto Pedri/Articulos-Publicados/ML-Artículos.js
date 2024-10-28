@@ -11,21 +11,40 @@ if (localStorage.getItem("user") === "-" || localStorage.getItem("user") == null
 
 
 
-//////////////////////////////// PARTE MODAL ////////////////////////////////////
-const abrirModal = document.querySelector("[data-open-modal]")
-const cerrarModal = document.querySelector("[data-close-modal]")
-const modal = document.querySelector("[data-modal]")
+//////////////////////////////// PARTE MODALES ////////////////////////////////////
+const abrirModalPublicar = document.querySelector("[data-open-modal]")
+const cerrarModalPublicar = document.querySelector("[data-close-modal]")
+const modalPublicar = document.querySelector("[data-modal]")
 
-abrirModal.addEventListener("click", () => {
-    modal.showModal()
+abrirModalPublicar.addEventListener("click", () => {
+    modalPublicar.showModal()
 })
 
+const modalLibros = document.querySelector(".graciasIvoLibros")
 
+
+
+/////////////////////////////////////////// PARTE DIALOG ////////////////////////////////////////////
+
+const cambiarDialog = document.querySelector(".dialogAbrir")
+const dialog = document.querySelector(".dialog")
+
+cambiarDialog.addEventListener("mouseover", () => {
+    dialog.show()
+})
+cambiarDialog.addEventListener("mouseout", () => {
+    dialog.close()
+})
+dialog.addEventListener("mouseover", () => {
+    dialog.show()
+})
+dialog.addEventListener("mouseout", () => {
+    dialog.close()
+})
 
 ////////////////////////////// PARTE DE OBTENER PUBLICACIONES Y GENERACIÓN DE LIBROS /////////////////////////////
 let listaDeLibros;
 window.onload = ()=>{
-    console.log("hola");
     fetchData("pedirLibros",(libros)=>{
         crearLibros(libros)
     })
@@ -34,11 +53,16 @@ window.onload = ()=>{
 
 function crearLibros(libros){
     listaDeLibros = libros;
-    console.log(listaDeLibros)
     let publicados = document.getElementById("publicadosinvisible");
     publicados.innerHTML = "";
     for (let i of listaDeLibros){
         publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+    }
+    let libritos = document.querySelectorAll(".libros");
+    for (let i of libritos){
+        i.addEventListener("click",()=>{
+            modalLibros.showModal()
+        })
     }
 }
 
@@ -46,7 +70,6 @@ function crearLibros(libros){
 
 document.getElementById("botonPublicar").addEventListener("click", publicar);
 function publicar(){ 
-    // TODO: PEDRO ACA ESTAN TODOS LOS IDS QUE TENES QUE PONER. Tambien tenes que agregar el boton publicar id: botonPublicar 
     let nombre = document.getElementById("nombre");
     let materia = document.getElementById("materia");
     let precio = document.getElementById("precio");
@@ -54,8 +77,8 @@ function publicar(){
     let año = document.getElementById("año");
     let nombreDeUsuario = localStorage.getItem("user");
     let mail = document.getElementById("mail");
-    let numero = document.getElementById("numero");// TODO: Agregar comparación de precio
-    if( nombre.value === "" || materia.value === "" || descripcion.value === "" || año.value === "" || mail.value === "" || resultado === "" || numero.value === ""){
+    let numero = document.getElementById("numero");
+    if( nombre.value === "" || materia.value === "" || descripcion.value === "" || año.value === "" || mail.value === "" || resultado === "" || numero.value === "" || precio.value === ""){
         alert("Es necesario completar todos los campos para poder publicar");
     }
     else{
@@ -63,14 +86,14 @@ function publicar(){
             "nombre": nombre.value.charAt(0).toUpperCase() + nombre.value.slice(1).toLowerCase(),
             "foto": resultado,
             "materia": materia.value,
-            "precio": "$"+ precio.value, //TODO: Agregar precio posta cuando esté en el css
+            "precio": "$"+ precio.value,
             "descripcion": descripcion.value,
             "año": año.value,
             "nombreDeUsuario": localStorage.getItem("user"),
             "mail": mail.value,
             "numero": numero.value
         }
-        modal.close()
+        modalPublicar.close()
         postData("publicar",publicacion);
         resultado = "";
         window.reload()

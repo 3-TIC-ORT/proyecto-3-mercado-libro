@@ -15,13 +15,22 @@
     <aside>
         <div class="god">
             <h3 class="categorias">Categorías</h3>
-            <button class="grados" id="Séptimo grado">Séptimo grado</button>
-            <button class="grados" id="Primer año">Primer año</button>
-            <button class="grados" id="Segundo año">Segundo año</button>
-            <button class="grados" id="Tercer año">Tercer año</button>
-            <button class="grados" id="Cuarto año">Cuarto año</button>
-            <button class="grados" id="Quinto año">Quinto año</button>
-            <button class="grados" id="Inglés">Inglés</button>
+            <button class="grados dialogAbrir" id="Séptimo grado">Séptimo grado</button>
+            <dialog class="dialog dialogSeptimo">
+                <div class="dialogDisplay">
+                    <button class="materias">Matemática</button>
+                    <button class="materias">Historia</button>
+                    <button class="materias">Ética</button>
+                    <button class="materias">Lengua</button>
+                    <button class="materias">Geografía</button>
+                </div>
+            </dialog>
+            <button class="grados dialogAbrir" id="Primer año">Primer año</button>
+            <button class="grados dialogAbrir" id="Segundo año">Segundo año</button>
+            <button class="grados dialogAbrir" id="Tercer año">Tercer año</button>
+            <button class="grados dialogAbrir" id="Cuarto año">Cuarto año</button>
+            <button class="grados dialogAbrir" id="Quinto año">Quinto año</button>
+            <button class="grados dialogAbrir" id="Inglés">Inglés</button>
         </div>
         <button class="sesion" id="botonCerrarSesion">Cerrar sesion</button>
     </aside>
@@ -34,9 +43,14 @@
             <h4 class="h4">Artículos publicados</h4>
             <div class="publicadosinvisible" id="publicadosinvisible">
             </div>
+            <dialog class="graciasIvoLibros">
+                <div class="modalLibros">
+
+                </div>
+            </dialog>
             <button class="mas" data-open-modal>+</button>
-            <dialog data-modal class="graciasIvo">
-                <div class="diaGod">
+            <dialog data-modal class="graciasIvoPublicar">
+                <div class="modalPublicar">
                     <div class="columnaIzquierda">
                         <div class="arribaIzquierda">
                             <div class="nombreAnio">

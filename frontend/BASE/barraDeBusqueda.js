@@ -91,3 +91,9 @@ function crearLibros(libros){
 }
 
 
+//////// PARA MODAL DEL LIBRO /////////////
+
+
+
+
+

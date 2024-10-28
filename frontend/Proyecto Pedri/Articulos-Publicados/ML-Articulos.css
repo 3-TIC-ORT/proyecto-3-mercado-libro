@@ -34,6 +34,25 @@ button:hover{
     background-color: #aaaaaa;
     cursor: pointer;
 }
+.dialog{
+    width: 12vw;
+    height: 40vh;
+    position: absolute;
+    top: 10vh;
+    left: 13vw;
+}
+.dialogDisplay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.materias{
+    border: 0;
+    background-color: #ffffff;
+    outline: 0;
+}
 .sesion{
     margin-top: 110%;
     background-color: #d45858;
@@ -171,16 +190,16 @@ a{
     text-align: center;
     color: black;
 }
-.graciasIvo{
+.graciasIvoPublicar{
     justify-self: center;
     align-self: center;
     width: 70vw;
     height: 90vh;
 }
-.graciasIvo::backdrop{
+.graciasIvoPublicar::backdrop{
     background-color: rgba(0, 0, 0, 0.6);
 }
-.diaGod{
+.modalPublicar{
     width: 100%;
     height: 100%;
     display: flex;
@@ -297,4 +316,13 @@ a{
     color: #ffffff;
     border: 0;
     box-shadow: 0 0 1vw 0 rgb(68, 68, 68);;
+}
+.graciasIvoLibros{
+    width: 70vw;
+    height: 90vh;
+    justify-self: center;
+    align-self: center;
+}
+.graciasIvoLibros::backdrop{
+    background-color: rgba(0, 0, 0, 0.6);
 }
