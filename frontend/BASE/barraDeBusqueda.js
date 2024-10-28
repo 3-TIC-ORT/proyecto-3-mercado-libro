@@ -18,6 +18,7 @@ for(let i of botonesGrados){
         }
         console.log(condiciones)
         localStorage.setItem("condiciones",JSON.stringify(condiciones))
+        clickaño()
     })
 }
 
@@ -30,6 +31,14 @@ let publicacionesValidas = [];
 function buscar1(){
     let condiciones = JSON.parse(localStorage.getItem("condiciones"))
     postData("buscador",condiciones,buscar2)
+}
+
+
+function clickaño(){
+    let condiciones = JSON.parse(localStorage.getItem("condiciones"))
+    postData("buscador",condiciones,(publicaciones)=>{
+        crearLibros(publicaciones)
+    })
 }
 
 function buscar2(publicacionesTotales){
