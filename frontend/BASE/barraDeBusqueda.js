@@ -12,7 +12,7 @@ let botonesGrados = document.querySelectorAll(".grados")
 for(let i of botonesGrados){
     i.addEventListener("click",()=>{
         let condiciones = JSON.parse(localStorage.getItem("condiciones"))
-        condiciones["año"] = i.textContent;
+        condiciones["año"] = i.id;
         if (Object.hasOwn(condiciones,"materia")){
             delete condiciones["materia"];
         }
