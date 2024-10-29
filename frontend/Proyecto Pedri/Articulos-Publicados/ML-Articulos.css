@@ -352,16 +352,23 @@ a{
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #4D9EE0;
 }
 .nombreAnioLibros{
     display: flex;
     justify-content: space-between;
     padding-left: 5%;
-    padding-right: 15%;
+    padding-right: 5%;
     box-sizing: border-box;
     align-items: center;
     width: 100%;
     height: 40%;
+}
+.nombreLibros{
+    width: 50%;
+}
+.anioLibros{
+    width: 25%;
 }
 .cajaDescLibros{
     width: 100%;
@@ -372,6 +379,9 @@ a{
 }
 .divLibros{
     font-size: 2vw;
+    background: #ffffff;
+    border: #000000 solid 0.2vw;
+    box-sizing: border-box;
 }
 .descLibros{
     box-sizing: border-box;
@@ -381,14 +391,65 @@ a{
 .abajoIzquierdaLibros{
     width: 100%;
     height: 50%;
-    background-color: lawngreen;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding-left: 5%;
+    background-color: #4D9EE0;
 }
 .matePrecioLibros{
+    width: 90%;
     display: flex;
     justify-content: space-between;
-    
+}
+.mateLibros{
+    width: 50%;
+}
+.precioLibros{
+    width: 40%;
+}
+.mailLibros{
+    width: 90%;
+}
+.numLibros{
+    width: 90%;
+}
+.columnaDerechaLibros{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.arribaDerechaLibros{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4D9EE0;
+}
+.mostrarImagenLibros{
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    border: 0.3vw #000000 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.abajoDerechaLibros{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    background-color: #4D9EE0;
+}
+.avisoUsuarios{
+    width: 80%;
+    height: 60%;
+    font-size: 1.5vw;
+    padding: 2%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
