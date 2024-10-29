@@ -47,11 +47,21 @@ button:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: #313131;
 }
 .materias{
     border: 0;
     background-color: #ffffff;
     outline: 0;
+    width: 50%;
+    color: #ffffff;
+    background-color: inherit;
+    text-align: left;
+    padding-left: 5%;
+}
+.materias:hover{
+    color: #00559A;
+    background-color: inherit;
 }
 .sesion{
     margin-top: 110%;
@@ -325,4 +335,60 @@ a{
 }
 .graciasIvoLibros::backdrop{
     background-color: rgba(0, 0, 0, 0.6);
+}
+.modalLibros{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.columnaIzquierdaLibros{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.arribaIzquierdaLibros{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.nombreAnioLibros{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 15%;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+.cajaDescLibros{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divLibros{
+    font-size: 2vw;
+}
+.descLibros{
+    box-sizing: border-box;
+    width: 90%;
+    height: 90%;
+}
+.abajoIzquierdaLibros{
+    width: 100%;
+    height: 50%;
+    background-color: lawngreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5%;
+}
+.matePrecioLibros{
+    display: flex;
+    justify-content: space-between;
+    
 }
