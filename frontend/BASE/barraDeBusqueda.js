@@ -84,8 +84,18 @@ function crearLibros(libros){
     let condiciones = JSON.parse(localStorage.getItem("condiciones"))
     if (Object.hasOwn(condiciones,"nombreDeUsuario")){
         for (let i of listaDeLibros){
-            publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="eliminar" id="${i.id + "-"}"><img src="bote-de-basura.png" class="tacho"></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
-            
+            let nmbre = "" 
+            if (i.nombre.length > 25){
+                for(let f = 0; f<=24; f++){
+                    nmbre += i.nombre[f];
+                }
+                nmbre+= "..."
+            }
+            else{
+                nmbre = i.nombre;
+            }
+            publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="eliminar" id="${i.id + "-"}"><img src="bote-de-basura.png" class="tacho"></div><div class="info"><h6 class="nombre">${nmbre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+                
         }
         let botones = document.querySelectorAll(".eliminar")
         for (let i of botones){
@@ -101,7 +111,17 @@ function crearLibros(libros){
         }
     }else{
         for (let i of listaDeLibros){
-            publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="info"><h6 class="nombre">${i.nombre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+            let nmbre = "" 
+            if (i.nombre.length > 25){
+                for(let f = 0; f<=24; f++){
+                    nmbre += i.nombre[f];
+                }
+                nmbre+= "..."
+            }
+            else{
+                nmbre = i.nombre;
+            }
+            publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="info"><h6 class="nombre">${nmbre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
         }
     }
     
