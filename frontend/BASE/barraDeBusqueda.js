@@ -8,7 +8,6 @@ window.addEventListener("pageshow",()=>{
 
 //CONDICIONES EN EL LOCALSTORAGE
 let botonesGrados = document.querySelectorAll(".grados")
-
 for(let i of botonesGrados){
     i.addEventListener("click",()=>{
         let condiciones = JSON.parse(localStorage.getItem("condiciones"))
@@ -22,6 +21,15 @@ for(let i of botonesGrados){
     })
 }
 
+let botonesMaterias = document.querySelectorAll(".materias");
+for (let i of botonesMaterias){
+    i.addEventListener("click",()=>{
+        let condiciones = JSON.parse(localStorage.getItem("condiciones"));
+        condiciones["materia"] = i.id;
+        localStorage.setItem("condiciones",JSON.stringify(condiciones));
+        clickaño()
+    })
+}
 
 // let lupita= document.getElementById("lupita"); TODO: ESTO ESTA COMENTADO PQ HAY Q CREAR EL BOTON LUPITA
 let focus = false;
