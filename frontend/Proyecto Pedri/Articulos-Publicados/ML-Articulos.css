@@ -38,7 +38,33 @@ button:hover{
     width: 12vw;
     height: 40vh;
     position: absolute;
+}
+.dialogSeptimo{
     top: 10vh;
+    left: 13vw;
+}
+.dialogPrimero{
+    top: 17.5vh;
+    left: 13vw;
+}
+.dialogSegundo{
+    top: 25vh;
+    left: 13vw;
+}
+.dialogTercero{
+    top: 32.5vh;
+    left: 13vw;
+}
+.dialogCuarto{
+    top: 39.5vh;
+    left: 13vw;
+}
+.dialogQuinto{
+    top: 47vh;
+    left: 13vw;
+}
+.dialogIngles{
+    top: 54vh;
     left: 13vw;
 }
 .dialogDisplay{
