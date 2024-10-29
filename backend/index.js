@@ -25,7 +25,7 @@ function registrarse(info){
     }
 
     if (nombre.length > 3 && contraseña.length > 3){
-        if (email.endsWith(".com") && email.includes("@") && !email.startsWith("@")){
+        if ((email.endsWith(".com") && email.includes("@") && !email.startsWith("@")) || (email.endsWith("ort.edu.ar") && email.includes("@") && !email.startsWith("@"))){
 
             let user = {}
             user.nombre = nombre;

@@ -53,15 +53,18 @@ button:hover{
     border: 0;
     background-color: #ffffff;
     outline: 0;
-    width: 50%;
+    width: 100%;
     color: #ffffff;
     background-color: inherit;
     text-align: left;
     padding-left: 5%;
+    transition: 0.2s all;
 }
 .materias:hover{
-    color: #00559A;
-    background-color: inherit;
+    background-color: gray;
+}
+.cinco{
+    height: calc(100% / 5);
 }
 .sesion{
     margin-top: 110%;
