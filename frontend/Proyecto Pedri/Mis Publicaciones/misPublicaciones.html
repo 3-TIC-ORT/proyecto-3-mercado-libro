@@ -35,8 +35,8 @@
             <div class="publicadosinvisible" id="publicadosinvisible">
             </div>
             <button class="mas" data-open-modal>+</button>
-            <dialog data-modal class="graciasIvo">
-                <div class="diaGod">
+            <dialog data-modal class="graciasIvoPublicar">
+                <div class="modalPublicar">
                     <div class="columnaIzquierda">
                         <div class="arribaIzquierda">
                             <div class="nombreAnio">
@@ -57,10 +57,17 @@
                             </div>
                         </div>
                         <div class="abajoIzquierda">
-                            <select id="materia" class="materiaDialog inputsDialog">
-                                <option value="" disabled selected>Materia</option>
-                                <option value="Mate">Mate</option>
-                            </select>
+                            <div class="matePrecio">
+                                <select id="materia" class="materiaDialog inputsDialog">
+                                    <option value="" disabled selected>Materia</option>
+                                    <option value="Matemática">Matemática</option>
+                                    <option value="Historia">Historia</option>
+                                    <option value="Ética">Ética</option>
+                                    <option value="Lengua">Lengua</option>
+                                    <option value="Geografía">Geografía</option>
+                                </select>
+                                <input id="precio" class="precioDialog inputsDialog" type="number" placeholder="Precio">
+                            </div>
                             <textarea id="mail" class="mailDialog inputsDialog" placeholder="Mail"></textarea>
                             <textarea id="numero" class="numDialog inputsDialog" placeholder="Número de teléfono"></textarea>
                         </div>

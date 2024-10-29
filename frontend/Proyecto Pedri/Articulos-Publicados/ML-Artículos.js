@@ -252,7 +252,4 @@ function displayImageName(){
             document.getElementById('nombreImagen').innerHTML = `<img id="ay" width="330px" src="${resultado}" alt=""></img>`
         }
     }
-
-    
-    
 }
