@@ -227,7 +227,7 @@ function mostrarMis(misLibros){
             else{
                 nmbre = i.nombre;
             }
-            publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="eliminar" id="${i.id + "-"}"><img src="bote-de-basura.png" class="tacho"></div><div class="info"><h6 class="nombre">${nmbre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
+            publicados.innerHTML = publicados.innerHTML + `<div class="libros" id="${i.id}"><div class="imagen"><img src="${i.foto}" class="img" alt=""></div><div class="eliminar" id="${i.id + "-"}"><img src="./imagenes/bote-de-basura.png" class="tacho"></div><div class="info"><h6 class="nombre">${nmbre}</h6><h6 class="precio">${i.precio}</h6></div></div>`
             
         }
         let botones = document.querySelectorAll(".eliminar")
@@ -240,6 +240,12 @@ function mostrarMis(misLibros){
                     }
                 }
                 postData("eliminar",elID,()=>{document.reload()})
+            })
+        }
+        let libritos = document.querySelectorAll(".libros");
+        for (let i of libritos){
+            i.addEventListener("click",()=>{
+                modalLibros.showModal()
             })
         }
 }

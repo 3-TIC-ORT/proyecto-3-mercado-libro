@@ -154,6 +154,7 @@ section{
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .h4{
     margin-top: 1.5%;
@@ -363,6 +364,9 @@ a{
     height: 90vh;
     justify-self: center;
     align-self: center;
+    border-radius: 6vh;
+    outline: 0;
+    border: 0;
 }
 .graciasIvoLibros::backdrop{
     background-color: rgba(0, 0, 0, 0.6);
@@ -373,116 +377,118 @@ a{
     height: 100%;
 }
 .columnaIzquierdaLibros{
-    width: 50%;
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-.arribaIzquierdaLibros{
-    height: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #4D9EE0;
-}
-.nombreAnioLibros{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
-    align-items: center;
-    width: 100%;
-    height: 40%;
+    overflow-y: scroll;
 }
 .nombreLibros{
-    width: 50%;
-}
-.anioLibros{
-    width: 25%;
-}
-.cajaDescLibros{
-    width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.divLibros{
-    font-size: 2vw;
-    background: #ffffff;
-    border: #000000 solid 0.2vw;
-    box-sizing: border-box;
-}
-.descLibros{
-    box-sizing: border-box;
-    width: 90%;
-    height: 90%;
-}
-.abajoIzquierdaLibros{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 5%;
-    background-color: #4D9EE0;
-}
-.matePrecioLibros{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-.mateLibros{
-    width: 50%;
+    font-size: 60%;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-weight: 600;
 }
 .precioLibros{
-    width: 40%;
+    font-size: 60%;
+    color:#0077CC;
+    margin-left: 5%;
+    margin-top: 2%;
+    font-weight: 600;
 }
-.mailLibros{
-    width: 90%;
+.materiaLibros{
+    font-size: 40%;
+    font-weight: 300;
+    margin-left: 5%;
+    margin-top: 7%;
 }
-.numLibros{
-    width: 90%;
+.añoLibros{
+    font-size: 40%;
+    font-weight: 300;
+    margin-left: 5%;
+}
+.tituloDescripcionLibros{
+    font-size: 40%;
+    font-weight: 600;
+    margin-left: 5%;
+    margin-top: 4%;
+}
+.descripcionLibros{
+    font-size: 40%;
+    font-weight: 300;
+    margin-left: 5%;
+    margin-bottom: 3%;
 }
 .columnaDerechaLibros{
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 .arribaDerechaLibros{
     width: 100%;
-    height: 80%;
+    height: 65%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #4D9EE0;
-}
-.mostrarImagenLibros{
-    width: 70%;
-    aspect-ratio: 1 / 1;
-    border: 0.3vw #000000 solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-end;
 }
 .abajoDerechaLibros{
     width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    background-color: #4D9EE0;
+    height: 35%;
+    
 }
-.avisoUsuarios{
-    width: 80%;
-    height: 60%;
-    font-size: 1.5vw;
-    padding: 2%;
-    box-sizing: border-box;
+.imgContainerLibros{
+    position: relative;
+    top: 5%;
+    width: 23vw;
+    height: 23vw;
+    outline: 2px solid rgb(0, 0, 0);
+}
+.imgDeLibros{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.abajoDerechaLibros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 45%;
+    margin-top: 5%;
+}
+.telefonoLibros{
+    font-size: 71%;
+    font-weight: 300;
     display: flex;
     align-items: center;
+    position: relative;
+    right: -2%;
+}
+.infoTelLibros{
+    font-size: 75%;
+}
+.imgTelefonoLibros{
+    width: 3vh;
+    position: relative;
+    left: -4%;
+}
+
+.mailLibros{
+    font-size: 71%;
+    font-weight: 300;
+    display: flex;
+    margin-top: 1%;
+    align-items: center;
+    position: relative;
+    right: -2%;
+}
+.infoMailLibros{
+    font-size: 75%;
+}
+.imgMailLibros{
+    width: 5vh;
+    position: relative;
+    left: -4%;
 }
 .eliminar{
     width: 2vw;
