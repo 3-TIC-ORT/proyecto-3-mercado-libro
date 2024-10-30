@@ -194,14 +194,14 @@ section{
     border-top-right-radius: 0.6vw;
 }
 .nombre{
-    font-size: 40%;
+    font-size: 35%;
     text-align: center;
     margin: 5% 0;
     max-width: 100%;
     overflow-wrap: break-word;
 }
 .precio{
-    font-size: 40%;
+    font-size: 35%;
     text-align: center;
     margin-bottom: 2%;
 }

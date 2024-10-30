@@ -25,6 +25,133 @@ abrirModalPublicar.addEventListener("click", () => {
 
 const modalLibros = document.querySelector(".graciasIvoLibros")
 
+////////////////////////// SEPTIMO /////////////////////////////////////
+const cambiarDialog = document.querySelector(".dialogAbrir")
+const dialog = document.querySelector(".dialog")
+
+cambiarDialog.addEventListener("mouseover", () => {
+    dialog.show()
+})
+cambiarDialog.addEventListener("mouseout", () => {
+    dialog.close()
+})
+dialog.addEventListener("mouseover", () => {
+    dialog.show()
+})
+dialog.addEventListener("mouseout", () => {
+    dialog.close()
+})
+
+
+
+////////////////////////// PRIMERO AÑO /////////////////////////////////////
+
+const cambiarDialogPrimero = document.querySelector(".dialogAbrirPrimero")
+const dialogPimero = document.querySelector(".dialogPrimero")
+
+cambiarDialogPrimero.addEventListener("mouseover", () => {
+    dialogPimero.show()
+})
+cambiarDialogPrimero.addEventListener("mouseout", () => {
+    dialogPimero.close()
+})
+dialogPimero.addEventListener("mouseover", () => {
+    dialogPimero.show()
+})
+dialogPimero.addEventListener("mouseout", () => {
+    dialogPimero.close()
+})
+
+////////////////////////// SEGUNDO AÑO /////////////////////////////////////
+
+const cambiarDialogSegundo = document.querySelector(".dialogAbrirSegundo")
+const dialogSegundo = document.querySelector(".dialogSegundo")
+
+cambiarDialogSegundo.addEventListener("mouseover", () => {
+    dialogSegundo.show()
+})
+cambiarDialogSegundo.addEventListener("mouseout", () => {
+    dialogSegundo.close()
+})
+dialogSegundo.addEventListener("mouseover", () => {
+    dialogSegundo.show()
+})
+dialogSegundo.addEventListener("mouseout", () => {
+    dialogSegundo.close()
+})
+
+
+////////////////////////// TERCER AÑO /////////////////////////////////////
+
+const cambiarDialogTercero = document.querySelector(".dialogAbrirTercero")
+const dialogTercero = document.querySelector(".dialogTercero")
+
+cambiarDialogTercero.addEventListener("mouseover", () => {
+    dialogTercero.show()
+})
+cambiarDialogTercero.addEventListener("mouseout", () => {
+    dialogTercero.close()
+})
+dialogTercero.addEventListener("mouseover", () => {
+    dialogTercero.show()
+})
+dialogTercero.addEventListener("mouseout", () => {
+    dialogTercero.close()
+})
+
+////////////////////////// CUARTO AÑO /////////////////////////////////////
+
+const cambiarDialogCuarto = document.querySelector(".dialogAbrirCuarto")
+const dialogCuarto = document.querySelector(".dialogCuarto")
+
+cambiarDialogCuarto.addEventListener("mouseover", () => {
+    dialogCuarto.show()
+})
+cambiarDialogCuarto.addEventListener("mouseout", () => {
+    dialogCuarto.close()
+})
+dialogCuarto.addEventListener("mouseover", () => {
+    dialogCuarto.show()
+})
+dialogCuarto.addEventListener("mouseout", () => {
+    dialogCuarto.close()
+})
+
+////////////////////////// QUINTO AÑO /////////////////////////////////////
+
+const cambiarDialogQuinto = document.querySelector(".dialogAbrirQuinto")
+const dialogQuinto = document.querySelector(".dialogQuinto")
+
+cambiarDialogQuinto.addEventListener("mouseover", () => {
+    dialogQuinto.show()
+})
+cambiarDialogQuinto.addEventListener("mouseout", () => {
+    dialogQuinto.close()
+})
+dialogQuinto.addEventListener("mouseover", () => {
+    dialogQuinto.show()
+})
+dialogQuinto.addEventListener("mouseout", () => {
+    dialogQuinto.close()
+})
+
+////////////////////////// INGLES /////////////////////////////////////
+
+const cambiarDialogIngles = document.querySelector(".dialogAbrirIngles")
+const dialogIngles = document.querySelector(".dialogIngles")
+
+cambiarDialogIngles.addEventListener("mouseover", () => {
+    dialogIngles.show()
+})
+cambiarDialogIngles.addEventListener("mouseout", () => {
+    dialogIngles.close()
+})
+dialogIngles.addEventListener("mouseover", () => {
+    dialogIngles.show()
+})
+dialogIngles.addEventListener("mouseout", () => {
+    dialogIngles.close()
+})
 
 
 ////////////////////////////// PARTE FUNCIONALIDAD (PARTE DE TOMAR LOS DATOS DE LOS INPUTS Y METERLOS EN OBJETOS Y PASARSELOS AL BACK)/////
