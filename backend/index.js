@@ -137,7 +137,6 @@ onEvent("pedirMisLibros",(user)=>{
 })
 
 onEvent("buscador",(condiciones)=>{
-    console.log("busqueda")
     let publicaciones = fs.readFileSync("DATOS/publisSubidas.json","utf-8");
     publicaciones = JSON.parse(publicaciones);
     let listaDePublis = [];
@@ -156,5 +155,15 @@ onEvent("buscador",(condiciones)=>{
     return listaDePublis;
 })
 
+onEvent("clickLibro",(id)=>{
+    console.log("abierto")
+    let publicaciones = fs.readFileSync("DATOS/publisSubidas.json","utf-8");
+    publicaciones = JSON.parse(publicaciones);
+    for (let i of publicaciones){
+        if(id === i.id){
+            return i;
+        }
+    }
+})
 
 startServer();

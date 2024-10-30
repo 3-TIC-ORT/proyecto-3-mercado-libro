@@ -128,7 +128,27 @@ function crearLibros(libros){
     let libritos = document.querySelectorAll(".libros");
     for (let i of libritos){
         i.addEventListener("click",()=>{
-            modalLibros.showModal()
+            postData("clickLibro",Number(i.id),(info)=>{
+                let nombreLibros = document.getElementById("nombreLibros");
+                let precioLibros = document.getElementById("precioLibros");
+                let materiaLibros = document.getElementById("materiaLibros");
+                let añoLibros = document.getElementById("añoLibros");
+                let descripcionLibros = document.getElementById("descripcionLibros");
+                let imgDeLibros = document.getElementById("imgDeLibros");
+                let datosDeLibros = document.getElementById("datosDeLibros");
+                let infoTelLibros = document.getElementById("infoTelLibros");
+                let infoMailLibros = document.getElementById("infoMailLibros");
+                nombreLibros.textContent = info.nombre;
+                precioLibros.textContent = info.precio;
+                materiaLibros.textContent = info.materia;
+                añoLibros.textContent = info.año;
+                descripcionLibros.textContent = info.descripcion;
+                imgDeLibros.src = info.foto;
+                datosDeLibros.textContent = info.nombreDeUsuario;
+                infoTelLibros.textContent = info.numero;
+                infoMailLibros.textContent = info.mail;
+                modalLibros.showModal()
+            })
         })
     }
     let nombres = document.querySelectorAll(".nombre");
