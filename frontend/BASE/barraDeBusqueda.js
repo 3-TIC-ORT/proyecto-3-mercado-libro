@@ -26,6 +26,7 @@ for (let i of botonesMaterias){
     i.addEventListener("click",()=>{
         let condiciones = JSON.parse(localStorage.getItem("condiciones"));
         condiciones["materia"] = i.id;
+        condiciones["año"] = i.parentNode.parentNode.previousSibling.previousSibling.id;
         localStorage.setItem("condiciones",JSON.stringify(condiciones));
         clickaño()
     })
