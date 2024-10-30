@@ -218,8 +218,8 @@ function mostrarMis(misLibros){
         publicados.innerHTML = "";
         for (let i of listaDeLibros){
             let nmbre = "" 
-            if (i.nombre.length > 25){
-                for(let f = 0; f<=24; f++){
+            if (i.nombre.length > 15){
+                for(let f = 0; f<=14; f++){
                     nmbre += i.nombre[f];
                 }
                 nmbre+= "..."
@@ -247,6 +247,17 @@ function mostrarMis(misLibros){
             i.addEventListener("click",()=>{
                 modalLibros.showModal()
             })
+        }
+        let nombres = document.querySelectorAll(".nombre");
+        for(let i of nombres){
+            if(i.offsetHeight > 40){
+                let nome = i.textContent;
+                let nuevoNome = "";
+                for (let v = 0; v < 8; v++){
+                    nuevoNome += nome[v];
+                }
+                i.textContent = nuevoNome + "..."
+            }
         }
 }
 ///////////////////// PARA CERRAR CESIÓN ////////////////////////
