@@ -92,6 +92,9 @@ button:hover{
 .cinco{
     height: calc(100% / 5);
 }
+.nueve{
+    height: calc(100% / 9);
+}
 .sesion{
     margin-top: 110%;
     background-color: #d45858;
