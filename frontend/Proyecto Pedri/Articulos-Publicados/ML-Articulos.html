@@ -100,31 +100,19 @@
             <dialog class="graciasIvoLibros">
                 <div class="modalLibros">
                     <div class="columnaIzquierdaLibros">
-                        <div class="arribaIzquierdaLibros">
-                            <div class="nombreAnioLibros">
-                                <div class="divLibros nombreLibros">(Nombre)</div>
-                                <div class="divLibros anioLibros">(Año)</div>
-                            </div>
-                            <div class="cajaDescLibros">
-                                <div class="divLibros descLibros">Aca va la descripción toda larga gooooooooood dale bocaaaaaaa como me gusta mostrarle a paty y leo que llego</div>
-                            </div>
-                        </div>
-                        <div class="abajoIzquierdaLibros">
-                            <div class="matePrecioLibros">
-                                <div class="divLibros mateLibros">(Materia)</div>
-                                <div class="divLibros precioLibros">(Precio)</div>
-                            </div>
-                            <div class="divLibros mailLibros">(Mail)</div>
-                            <div class="divLibros numLibros">(Número de Teléfono)</div>
+                        <div class="nombreLibros" id="nombreLibros">Toldot de Israel 3</div>
+                        <div class="precioLibros" id="precioLibros">$22.000</div>
+                        <div class="materiaLibros" id="materiaLibros">Formación ética y ciudadana</div>
+                        <div class="añoLibros" id="añoLibros">Tercer año  (3°)</div>
+                        <div class="tituloDescripcionLibros">Descripción:</div>
+                        <div class="descripcionLibros" id="descripcionLibros">Cubre desde la antigüedad hasta tiempos modernos, aunque los temas contemporáneos son menos detallados.
+                            Estilo accesible y bien estructurado, ideal para quienes buscan una introducción sin lenguaje complejo.
+                            Documentación confiable, pero con algunos períodos simplificados, lo que podría dejar con dudas a lectores avanzados.
                         </div>
                     </div>
                     <div class="columnaDerechaLibros">
-                        <div class="arribaDerechaLibros">
-                            <div class="divLibros mostrarImagenLibros">(aca va la imagen del muppet o la isla melemele)</div>
-                        </div>
-                        <div class="abajoDerechaLibros">
-                            <div class="divLibros avisoUsuarios">Contacte al dueño del libro mediente los datos rellenados en la zona de la izquierda</div>
-                        </div>
+                        <div class="arribaDerechaLibros"></div>
+                        <div class="abajoDerechaLibros"></div>
                     </div>
                 </div>
             </dialog>
@@ -160,7 +148,7 @@
                                     <option value="Lengua">Lengua</option>
                                     <option value="Geografía">Geografía</option>
                                 </select>
-                                <input id="precio" class="precioDialog inputsDialog" type="number" placeholder="Precio">
+                                <input id="precio" class="precioDialog inputsDialog" type="number" max="999999" placeholder="Precio">
                             </div>
                             <textarea id="mail" class="mailDialog inputsDialog" placeholder="Mail"></textarea>
                             <textarea id="numero" class="numDialog inputsDialog" placeholder="Número de teléfono"></textarea>

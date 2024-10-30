@@ -201,8 +201,9 @@ function publicar(){
     let numero = document.getElementById("numero");
     if( nombre.value === "" || materia.value === "" || descripcion.value === "" || año.value === "" || mail.value === "" || resultado === "" || numero.value === "" || precio.value === ""){
         alert("Es necesario completar todos los campos para poder publicar");
-    }
-    else{
+    }else if(Number(precio.value) == 0 || Number(precio.value) > 999999){
+        alert("El precio debe ser de entre $1 y $999999");
+    }else{
         let publicacion = {
             "nombre": nombre.value.charAt(0).toUpperCase() + nombre.value.slice(1).toLowerCase(),
             "foto": resultado,
