@@ -9,7 +9,7 @@ body{
 }
 aside{
     height: 100vh;
-    width: 15vw;
+    width: 18vw;
     background-color: #2C3E50;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ aside{
     background-color: #3498DB;
     border: 0;
     transition: 0.2s all;
-    width: 90%;
+    width: 85%;
     height: 9%;
     border-radius: 0.3vw;
     color: #ffffff;
@@ -40,7 +40,7 @@ button:hover{
     background-color: #d45858;
     border: 0;
     transition: 0.2s all;
-    width: 90%;
+    width: 85%;
     height: 9%;
     border-radius: 0.3vw;
     color: #ffffff;
@@ -124,19 +124,21 @@ main{
     width: 87vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     background-color: #2C3E50;
+    padding-right: 2%;
 }
 nav{
     height: 10%;
-    width: 75vw;
+    width: 84vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1.5vh;
+
 }
 .buscador{
-    width: 60vw;
+    width: 70vw;
     height: 6vh;
     font-size: 155%;
     background-color: #D9D9D9;
@@ -155,12 +157,13 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 0;
 }
 .buscador::placeholder{
     font-size: 100%;
 }
 section{
-    width: 95%;
+    width: 84vw;
     height: 90%;
     background-color: #D9D9D9;
     margin-top: 1%;
@@ -213,15 +216,15 @@ section{
 }
 .nombre{
     font-size: 35%;
-    text-align: center;
-    margin: 5% 0;
     max-width: 100%;
     overflow-wrap: break-word;
+    font-weight: 400;
+    margin-left: 5%;
 }
 .precio{
-    font-size: 35%;
-    text-align: center;
-    margin-bottom: 2%;
+    font-size: 45%;
+    font-weight: 600;
+    margin-left: 5%;
 }
 .mas{
     width: 5vw;
