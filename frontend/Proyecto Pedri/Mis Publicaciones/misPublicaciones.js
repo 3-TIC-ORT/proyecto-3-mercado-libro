@@ -156,6 +156,38 @@ dialogIngles.addEventListener("mouseout", () => {
 })
 
 
+
+
+/////////////////////////////////////// PARTE DE PUBLICACIONES EN INGLES /////////////////////////////////////////
+
+
+let materias = {
+    "Séptimo grado": ["Lengua", "Ciencias Sociales", "Ciencias Naturales", "Educación Judía", "Hebreo"],
+    "Primer año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educación Judía", "Hebreo"],
+    "Segundo año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educación Judía", "Hebreo"],
+    "Tercer año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educación Judía", "Hebreo"],
+    "Cuarto año": ["Lengua", "Geografía", "Ética", "Historia", "Educación Judía", "Hebreo"],
+    "Quinto año": ["Lengua", "Historia", "Educación Judía", "Hebreo"]
+}
+let materiasIngles = ["Key", "Preliminary", "Teens 5", "Pre First", "First", "Pre Advanced", "Advanced", "Pre Proficiency", "Proficiency"]
+
+document.getElementById("año").addEventListener("change",()=>{
+    if (document.getElementById("año").value === "Inglés"){
+        let materiaPublicar = document.getElementById("materia");
+        materiaPublicar.innerHTML = `<option value="" disabled selected>Nivel</option>`;
+        materiasIngles.forEach(materiaIngles => {
+            materiaPublicar.innerHTML += `<option value="${materiaIngles}">${materiaIngles}</option>`;
+        });
+    }else{
+        let materiaPublicar = document.getElementById("materia");
+        materiaPublicar.innerHTML = `<option value="" disabled selected>Materia</option>`;
+        materias[document.getElementById("año").value].forEach(materiaNormal => {
+            materiaPublicar.innerHTML += `<option value="${materiaNormal}">${materiaNormal}</option>`;
+        });
+    }
+})
+
+
 ////////////////////////////// PARTE FUNCIONALIDAD (PARTE DE TOMAR LOS DATOS DE LOS INPUTS Y METERLOS EN OBJETOS Y PASARSELOS AL BACK)/////
 
 document.getElementById("botonPublicar").addEventListener("click", publicar);

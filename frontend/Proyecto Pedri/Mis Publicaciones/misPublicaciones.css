@@ -9,64 +9,91 @@ body{
 }
 aside{
     height: 100vh;
-    width: 13vw;
-    background-color: #D9D9D9;
-}
-.god{
-    height: 60vh;
-    width: 13vw;
+    width: 18vw;
+    background-color: #2C3E50;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
 }
 .categorias{
     font-size: 160%;
+    margin-left: 10%;
+    color: #ffffff;
+    width: min-content;
+}
+.categorias:hover{
+    cursor: pointer;
 }
 .grados{
     color: black;
     text-align: center;
-    width: 100%;
-    height: 6%;
-    background-color: #f3f3f3;
+    background-color: #3498DB;
     border: 0;
     transition: 0.2s all;
+    width: 85%;
+    height: 9%;
+    border-radius: 0.3vw;
+    color: #ffffff;
+    font-size: 100%;
 }
 button:hover{
-    background-color: #aaaaaa;
+    background-color: #2980B9;
     cursor: pointer;
+}
+.sesion{
+    background-color: #D9534F;
+    border: 0;
+    transition: 0.2s all;
+    width: 85%;
+    height: 9%;
+    border-radius: 0.3vw;
+    color: #ffffff;
+    font-size: 100%;
+}
+.sesion:hover{
+    background-color: #d8716d;
+}
+.gradosSesion{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 0 5% 0;
+    align-items: center;
 }
 .dialog{
     width: 12vw;
     height: 40vh;
     position: absolute;
+    border-radius: 0.5vw;
 }
 .dialogSeptimo{
-    top: 10vh;
+    top: 13vh;
     left: 13vw;
 }
 .dialogPrimero{
-    top: 17.5vh;
+    top: 24vh;
     left: 13vw;
 }
 .dialogSegundo{
-    top: 25vh;
+    top: 35vh;
     left: 13vw;
 }
 .dialogTercero{
-    top: 32.5vh;
+    top: 46vh;
     left: 13vw;
 }
 .dialogCuarto{
-    top: 39.5vh;
+    top: 25vh;
     left: 13vw;
 }
 .dialogQuinto{
-    top: 47vh;
+    top: 36vh;
     left: 13vw;
 }
 .dialogIngles{
-    top: 54vh;
+    top: 47vh;
     left: 13vw;
 }
 .dialogDisplay{
@@ -76,6 +103,7 @@ button:hover{
     flex-direction: column;
     justify-content: space-around;
     background-color: #313131;
+    border-radius: 0.2vw;
 }
 .materias{
     border: 0;
@@ -91,63 +119,67 @@ button:hover{
 .materias:hover{
     background-color: gray;
 }
+.primerBot{
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.ultimoBot{
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
 .cinco{
-    height: calc(100% / 5);
-}
-.sesion{
-    margin-top: 110%;
-    background-color: #d45858;
-    width: 100%;
-    height: 4%;
-    border: 0;
-    transition: 0.2s all;
-}
-.sesion:hover{
-    background-color: #D89494;;
+    height: 100%;
 }
 main{
     height: 100vh;
     width: 87vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    background-color: #2C3E50;
+    padding-right: 2%;
 }
 nav{
     height: 10%;
-    width: 75vw;
+    width: 84vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1.5vh;
+
 }
 .buscador{
-    width: 60vw;
+    width: 70vw;
     height: 6vh;
     font-size: 155%;
-    background-color: #D9D9D9;
+    background-color: #D1D5DB;
     border: 0;
     padding-left: 1%;
     box-sizing: border-box;
+}
+.buscador::placeholder{
+    font-size: 100%;
 }
 .cuenta{
     width: 8vw;
     height: 6vh;
     font-size: 110%;
-    background-color: #D9D9D9;
+    background-color: #2E8BC0;
     border: 0;
     transition: 0.2s all;
-    color: black;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 0.2vw;
 }
-.buscador::placeholder{
-    font-size: 100%;
+.cuenta:hover{
+    background-color: #27729e;
 }
 section{
-    width: 90%;
+    width: 84vw;
     height: 90%;
-    background-color: #D9D9D9;
+    background-color: #F3F4F6;
     margin-top: 1%;
     font-size: 4.5vw;
     display: flex;
@@ -197,16 +229,18 @@ section{
     border-top-right-radius: 0.6vw;
 }
 .nombre{
-    font-size: 40%;
-    text-align: center;
-    margin: 5% 0;
+    font-size: 35%;
     max-width: 100%;
     overflow-wrap: break-word;
+    font-weight: 400;
+    margin-left: 5%;
+    margin-top: 5%;
 }
 .precio{
-    font-size: 40%;
-    text-align: center;
-    margin-bottom: 2%;
+    font-size: 45%;
+    font-weight: 600;
+    margin-left: 5%;
+    margin-top: 2%;
 }
 .mas{
     width: 5vw;
@@ -215,7 +249,7 @@ section{
     position: fixed;
     right: 2vw;
     bottom: 3vh;
-    background-color: rgb(101, 101, 233);
+    background-color: #2978A0;
     border: 0.5vh solid #ffffff;
     box-sizing: border-box;
     font-size: 100%;
@@ -310,12 +344,12 @@ a{
     justify-content: space-between;
 }
 .materiaDialog{
-    width: 45%;
+    width: 50%;
     height: 8vh;
 }
 .precioDialog{
     width: 45%;
-    height: 8vh;
+    height: 7.35vh;
 }
 .mailDialog{
     width: 90%;
@@ -474,7 +508,6 @@ a{
     position: relative;
     left: -4%;
 }
-
 .mailLibros{
     font-size: 71%;
     font-weight: 300;
@@ -507,7 +540,6 @@ a{
     border: 0.3vh solid #fff;
     box-shadow: 23px 23px 36px -40px;
 }
-
 .tacho{
     width: 1.5vw;
     position: absolute;

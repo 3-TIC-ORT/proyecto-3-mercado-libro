@@ -234,11 +234,13 @@ section{
     overflow-wrap: break-word;
     font-weight: 400;
     margin-left: 5%;
+    margin-top: 5%;
 }
 .precio{
     font-size: 45%;
     font-weight: 600;
     margin-left: 5%;
+    margin-top: 2%;
 }
 .mas{
     width: 5vw;
@@ -342,12 +344,12 @@ a{
     justify-content: space-between;
 }
 .materiaDialog{
-    width: 45%;
+    width: 50%;
     height: 8vh;
 }
 .precioDialog{
     width: 45%;
-    height: 8vh;
+    height: 7.35vh;
 }
 .mailDialog{
     width: 90%;
@@ -506,7 +508,6 @@ a{
     position: relative;
     left: -4%;
 }
-
 .mailLibros{
     font-size: 71%;
     font-weight: 300;
