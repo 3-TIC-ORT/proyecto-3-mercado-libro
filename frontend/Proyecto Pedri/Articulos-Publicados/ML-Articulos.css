@@ -130,9 +130,6 @@ button:hover{
 .cinco{
     height: calc(100% / 5);
 }
-.nueve{
-    height: calc(100% / 9);
-}
 main{
     height: 100vh;
     width: 87vw;
