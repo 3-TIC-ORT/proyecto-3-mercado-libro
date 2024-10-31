@@ -208,7 +208,7 @@ function crearLibros(libros){
     }
     let nombres = document.querySelectorAll(".nombre");
     for(let i of nombres){
-        if(i.offsetHeight > 40){
+        if(i.offsetHeight > 45){
             let nome = i.textContent;
             let nuevoNome = "";
             for (let v = 0; v < 8; v++){
