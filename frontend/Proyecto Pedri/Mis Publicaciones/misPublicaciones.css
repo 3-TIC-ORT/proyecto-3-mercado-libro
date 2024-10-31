@@ -388,6 +388,7 @@ a{
     margin-left: 5%;
     margin-top: 3%;
     font-weight: 600;
+    overflow-wrap: break-word;
 }
 .precioLibros{
     font-size: 60%;
@@ -418,6 +419,7 @@ a{
     font-weight: 300;
     margin-left: 5%;
     margin-bottom: 3%;
+    overflow-wrap: break-word;
 }
 .columnaDerechaLibros{
     width: 40%;
