@@ -162,7 +162,7 @@ let materias = {
     "Segundo año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educacion Judía", "Hebreo"],
     "Tercer año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educacion Judía", "Hebreo"],
     "Cuarto año": ["Lengua", "Geografía", "Ética", "Historia", "Educacion Judía", "Hebreo"],
-    "Quinto año": ["Lengua", "Historia", "Educacion Judia", "Hebreo"]
+    "Quinto año": ["Lengua", "Historia", "Educacion Judía", "Hebreo"]
 }
 let materiasIngles = ["Key", "Preliminary", "Teens 5", "Pre First", "First", "Pre Advanced", "Advanced", "Pre Proficiency", "Proficiency"]
 
