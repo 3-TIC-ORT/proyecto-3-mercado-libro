@@ -158,10 +158,10 @@ dialogIngles.addEventListener("mouseout", () => {
 
 let materias = {
     "Séptimo grado": ["Lengua", "Ciencias Sociales", "Ciencias Naturales", "Historia Judía", "Hebreo"],
-    "Primer año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educacion Judia", "Hebreo"],
-    "Segundo año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educacion Judia", "Hebreo"],
-    "Tercer año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educacion Judia", "Hebreo"],
-    "Cuarto año": ["Lengua", "Geografía", "Ética", "Historia", "Educacion Judia", "Hebreo"],
+    "Primer año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educacion Judía", "Hebreo"],
+    "Segundo año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educacion Judía", "Hebreo"],
+    "Tercer año": ["Lengua", "Geografía", "Ética", "Biología", "Historia", "Educacion Judía", "Hebreo"],
+    "Cuarto año": ["Lengua", "Geografía", "Ética", "Historia", "Educacion Judía", "Hebreo"],
     "Quinto año": ["Lengua", "Historia", "Educacion Judia", "Hebreo"]
 }
 let materiasIngles = ["Key", "Preliminary", "Teens 5", "Pre First", "First", "Pre Advanced", "Advanced", "Pre Proficiency", "Proficiency"]
