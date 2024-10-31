@@ -20,9 +20,22 @@ aside{
     margin-left: 10%;
     color: #ffffff;
     width: min-content;
+    position: relative;
+    left: 9%;
+    font-weight: 600;
 }
 .categorias:hover{
     cursor: pointer;
+}
+.logo{
+    width: 33%;
+    position: absolute;
+    left: 60%;
+    
+}
+.m{
+    color: #4D9EE0;
+    font-weight: 600;
 }
 .grados{
     color: black;
