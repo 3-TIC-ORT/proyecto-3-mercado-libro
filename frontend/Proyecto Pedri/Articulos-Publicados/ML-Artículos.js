@@ -153,6 +153,28 @@ dialogIngles.addEventListener("mouseout", () => {
 })
 
 
+/////////////////////////////////////// PARTE DE PUBLICACIONES EN INGLES /////////////////////////////////////////
+
+
+let materiasNormales = ["Matemática", "Historia", "Ética", "Lengua", "Geografía"]
+let materiasIngles = ["Key", "Preliminary", "Teens5", "PreFirst", "First", "PreAdvanced", "Advanced", "PreProficiency", "Proficiency"]
+document.getElementById("año").addEventListener("change",()=>{
+    if (document.getElementById("año").value === "Inglés"){
+        let materiaPublicar = document.getElementById("materia");
+        materiaPublicar.innerHTML = `<option value="" disabled selected>Nivel</option>`;
+        materiasIngles.forEach(materiaIngles => {
+            materiaPublicar.innerHTML += `<option value="${materiaIngles}">${materiaIngles}</option>`;
+        });
+    }else{
+        let materiaPublicar = document.getElementById("materia");
+        materiaPublicar.innerHTML = `<option value="" disabled selected>Materia</option>`;
+        materiasNormales.forEach(materiaNormal => {
+            materiaPublicar.innerHTML += `<option value="${materiaNormal}">${materiaNormal}</option>`;
+        });
+    }
+})
+
+
 ////////////////////////////// PARTE DE OBTENER PUBLICACIONES Y GENERACIÓN DE LIBROS /////////////////////////////
 let listaDeLibros;
 window.onload = ()=>{

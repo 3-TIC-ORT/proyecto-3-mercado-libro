@@ -33,11 +33,11 @@ aside{
     font-size: 100%;
 }
 button:hover{
-    background-color: #aaaaaa;
+    background-color: #2980B9;
     cursor: pointer;
 }
 .sesion{
-    background-color: #d45858;
+    background-color: #D9534F;
     border: 0;
     transition: 0.2s all;
     width: 85%;
@@ -47,7 +47,7 @@ button:hover{
     font-size: 100%;
 }
 .sesion:hover{
-    background-color: #D89494;;
+    background-color: #d8716d;
 }
 .gradosSesion{
     height: 90%;
@@ -62,33 +62,34 @@ button:hover{
     width: 12vw;
     height: 40vh;
     position: absolute;
+    border-radius: 0.5vw;
 }
 .dialogSeptimo{
-    top: 10vh;
+    top: 13vh;
     left: 13vw;
 }
 .dialogPrimero{
-    top: 17.5vh;
+    top: 24vh;
     left: 13vw;
 }
 .dialogSegundo{
-    top: 25vh;
+    top: 35vh;
     left: 13vw;
 }
 .dialogTercero{
-    top: 32.5vh;
+    top: 46vh;
     left: 13vw;
 }
 .dialogCuarto{
-    top: 39.5vh;
+    top: 25vh;
     left: 13vw;
 }
 .dialogQuinto{
-    top: 47vh;
+    top: 36vh;
     left: 13vw;
 }
 .dialogIngles{
-    top: 54vh;
+    top: 47vh;
     left: 13vw;
 }
 .dialogDisplay{
@@ -98,6 +99,7 @@ button:hover{
     flex-direction: column;
     justify-content: space-around;
     background-color: #313131;
+    border-radius: 0.2vw;
 }
 .materias{
     border: 0;
@@ -112,6 +114,14 @@ button:hover{
 }
 .materias:hover{
     background-color: gray;
+}
+.primerBot{
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.ultimoBot{
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
 }
 .cinco{
     height: calc(100% / 5);
@@ -141,31 +151,34 @@ nav{
     width: 70vw;
     height: 6vh;
     font-size: 155%;
-    background-color: #D9D9D9;
+    background-color: #D1D5DB;
     border: 0;
     padding-left: 1%;
     box-sizing: border-box;
+}
+.buscador::placeholder{
+    font-size: 100%;
 }
 .cuenta{
     width: 8vw;
     height: 6vh;
     font-size: 110%;
-    background-color: #D9D9D9;
+    background-color: #2E8BC0;
     border: 0;
     transition: 0.2s all;
-    color: black;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 0;
+    border-radius: 0.2vw;
 }
-.buscador::placeholder{
-    font-size: 100%;
+.cuenta:hover{
+    background-color: #27729e;
 }
 section{
     width: 84vw;
     height: 90%;
-    background-color: #D9D9D9;
+    background-color: #F3F4F6;
     margin-top: 1%;
     font-size: 4.5vw;
     display: flex;
@@ -233,7 +246,7 @@ section{
     position: fixed;
     right: 2vw;
     bottom: 3vh;
-    background-color: rgb(101, 101, 233);
+    background-color: #2978A0;
     border: 0.5vh solid #ffffff;
     box-sizing: border-box;
     font-size: 100%;
