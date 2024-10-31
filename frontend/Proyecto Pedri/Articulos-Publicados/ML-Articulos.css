@@ -128,7 +128,7 @@ button:hover{
     border-bottom-right-radius: inherit;
 }
 .cinco{
-    height: calc(100% / 5);
+    height: 100%;
 }
 main{
     height: 100vh;
