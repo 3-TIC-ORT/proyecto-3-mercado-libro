@@ -20,10 +20,24 @@ aside{
     margin-left: 10%;
     color: #ffffff;
     width: min-content;
+    position: relative;
+    left: 9%;
+    font-weight: 600;
 }
 .categorias:hover{
     cursor: pointer;
 }
+.logo{
+    width: 33%;
+    position: absolute;
+    left: 60%;
+    
+}
+.m{
+    color: #4D9EE0;
+    font-weight: 600;
+}
+
 .grados{
     color: black;
     text-align: center;
@@ -401,6 +415,7 @@ a{
     border-radius: 6vh;
     outline: 0;
     border: 0;
+    overflow-x: hidden;
 }
 .graciasIvoLibros::backdrop{
     background-color: rgba(0, 0, 0, 0.6);
@@ -491,6 +506,10 @@ a{
     align-items: center;
     font-size: 45%;
     margin-top: 5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    left: 2%;
 }
 .telefonoLibros{
     font-size: 71%;
@@ -502,6 +521,9 @@ a{
 }
 .infoTelLibros{
     font-size: 75%;
+    overflow-wrap: break-word;
+    width: 100%;
+    text-align: center;
 }
 .imgTelefonoLibros{
     width: 3vh;
@@ -519,9 +541,11 @@ a{
 }
 .infoMailLibros{
     font-size: 75%;
+    overflow-wrap: break-word;
 }
 .imgMailLibros{
     width: 5vh;
     position: relative;
     left: -4%;
 }
+
