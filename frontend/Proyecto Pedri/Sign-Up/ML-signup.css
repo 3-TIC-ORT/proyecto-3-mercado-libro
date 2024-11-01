@@ -8,52 +8,46 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2C3E50;
 }
 .grande{    
-    width: 42vw;
-    height: 42vw;
-    background-color: #F3F4F6;
+    width: 40vw;
+    height: 40vw;
+    background-color: #00559A;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 3vw;
+    justify-content: space-around;
 }
 .bienvenido{
-    font-size: 300%;
+    font-size: 350%;
 }
 .usuario{
-    width: 60%;
-    height: 10%;
-    padding-left: 2%;
+    width: 25vw;
+    height: 8vh;
     border: 0;
-    background-color: #D1D5DB;
-    border-radius: 0.2vw;
+    background-color: #F5F5F5;
+    padding-left: 2%;
 }
 .mail{
-    width: 60%;
-    height: 10%;
+    width: 25vw;
+    height: 8vh;
     padding-left: 2%;
     border: 0;
-    background-color: #D1D5DB;
-    border-radius: 0.2vw;
+    background-color: #F5F5F5;
 }
 .contraseña{
-    width: 60%;
-    height: 10%;
+    width: 25vw;
+    height: 8vh;
     padding-left: 2%;
     border: 0;
-    background-color: #D1D5DB;
-    border-radius: 0.2vw;
+    background-color: #F5F5F5;
 }
 .login{
-    width: 40%;
-    height: 8%;
+    width: 25vw;
+    height: 8vh;
     font-size: 100%;
     border: 0;
-    background-color: #62aee0;
-    border-radius: 0.2vw;
+    background-color: #F5F5F5;
 }
 .login:hover{
     background-color: #98e2ff;
@@ -61,11 +55,14 @@ body{
 }
 .registrate{
     font-size: 130%;
-    text-decoration: none;
     border: 0;
+    text-decoration: none;
+    color: black;
 }
 .registrate:visited{
-    font-size: 130%;
+    margin-top: -80px;
+    margin-bottom: -20px;
+    font-size: 20px;
     text-decoration: none;
     color: black;
 }
