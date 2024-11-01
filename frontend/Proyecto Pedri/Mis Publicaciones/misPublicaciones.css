@@ -271,6 +271,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: 0;
 }
 .mas:hover{
     background-color: rgb(121, 121, 233);
@@ -285,6 +286,8 @@ a{
     align-self: center;
     width: 70vw;
     height: 90vh;
+    border-radius: 6vh;
+    border: 0;
 }
 .graciasIvoPublicar::backdrop{
     background-color: rgba(0, 0, 0, 0.6);
@@ -293,6 +296,7 @@ a{
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
 }
 .columnaIzquierda{
     width: 50%;
@@ -405,7 +409,10 @@ a{
     background-color: #038587;
     color: #ffffff;
     border: 0;
-    box-shadow: 0 0 1vw 0 rgb(68, 68, 68);;
+    box-shadow: 0 0 1vw 0 rgb(68, 68, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .graciasIvoLibros{
     width: 70vw;
@@ -486,7 +493,7 @@ a{
 .abajoDerechaLibros{
     width: 100%;
     height: 35%;
-    
+    outline: 0;
 }
 .imgContainerLibros{
     position: relative;
@@ -548,8 +555,6 @@ a{
     position: relative;
     left: -4%;
 }
-
-
 .eliminar{
     width: 2vw;
     aspect-ratio: 1/1;

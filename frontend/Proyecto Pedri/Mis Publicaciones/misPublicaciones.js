@@ -25,7 +25,30 @@ abrirModalPublicar.addEventListener("click", () => {
     modalPublicar.showModal()
 })
 
+modalPublicar.addEventListener("click", e => {
+    const dimensionesModalPublicar = modalPublicar.getBoundingClientRect()
+    if (
+        e.clientX < dimensionesModalPublicar.left ||
+        e.clientX > dimensionesModalPublicar.right ||
+        e.clientY < dimensionesModalPublicar.top ||
+        e.clientY > dimensionesModalPublicar.bottom
+    ) {
+        modalPublicar.close()
+    }
+})
+
 const modalLibros = document.querySelector(".graciasIvoLibros")
+modalLibros.addEventListener("click", e => {
+    const dimensionesModalLibros = modalLibros.getBoundingClientRect()
+    if (
+        e.clientX < dimensionesModalLibros.left ||
+        e.clientX > dimensionesModalLibros.right ||
+        e.clientY < dimensionesModalLibros.top ||
+        e.clientY > dimensionesModalLibros.bottom
+    ) {
+        modalLibros.close()
+    }
+})
 
 ////////////////////////// SEPTIMO /////////////////////////////////////
 const cambiarDialog = document.querySelector(".dialogAbrir")
@@ -154,8 +177,6 @@ dialogIngles.addEventListener("mouseover", () => {
 dialogIngles.addEventListener("mouseout", () => {
     dialogIngles.close()
 })
-
-
 
 
 /////////////////////////////////////// PARTE DE PUBLICACIONES EN INGLES /////////////////////////////////////////
