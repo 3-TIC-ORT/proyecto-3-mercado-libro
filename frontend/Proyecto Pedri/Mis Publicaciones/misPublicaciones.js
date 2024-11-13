@@ -20,6 +20,7 @@ if (localStorage.getItem("user") === "-" || localStorage.getItem("user") == null
 const abrirModalPublicar = document.querySelector("[data-open-modal]")
 const cerrarModalPublicar = document.querySelector("[data-close-modal]")
 const modalPublicar = document.querySelector("[data-modal]")
+const botonSubirImagen = document.getElementById("upload")
 
 abrirModalPublicar.addEventListener("click", () => {
     modalPublicar.showModal()
@@ -49,6 +50,10 @@ modalLibros.addEventListener("click", e => {
         modalLibros.close()
     }
 })
+
+botonSubirImagen.addEventListener("click", e => {
+    e.stopImmediatePropagation();
+});
 
 ////////////////////////// SEPTIMO /////////////////////////////////////
 const cambiarDialog = document.querySelector(".dialogAbrir")
