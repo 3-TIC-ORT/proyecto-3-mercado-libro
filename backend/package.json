@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/3-TIC-ORT/proyecto-3-mercado-libro#readme",
   "dependencies": {
+    "jsonwebtoken": "^9.0.2",
     "soquetic": "^1.0.3"
   }
 }

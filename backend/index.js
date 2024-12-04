@@ -1,5 +1,8 @@
 import fs from "fs";
 import {onEvent,startServer} from "soquetic";
+import jwt from "jsonwebtoken";
+
+const SK = "pancho25subwayGrace";
 
 //PARTE DE LEO
 function registrarse(info){
@@ -33,7 +36,11 @@ function registrarse(info){
             user.email = email;
             usuarios.push(user);
             fs.writeFileSync("DATOS/usuarios.json",JSON.stringify(usuarios));
-            return {ok:true, user: user.nombre};
+            const token = jwt.sign(user.nombre,SK,{expiresIn: "24h"})
+            let tokens = JSON.parse(fs.readFileSync("tokens.json"));
+            tokens.push(token);
+            fs.writeFileSync("tokens.json",JSON.stringify(tokens));
+            return {ok:true, user: token};
         }else{
             return {ok:false, msg:"Ingrese un correo válido."};
         }
@@ -51,7 +58,12 @@ function iniciarSesion(info){
         if (emailOusuario === i.nombre || emailOusuario === i.email){
             if (contraseña === i.contraseña){
                 console.log(`Bienvenido, ${i.nombre}`);
-                return {ok: true, user: i.nombre};
+                let str = i.nombre;
+                const token = jwt.sign(str,SK,{expiresIn: "24h"})
+                let tokens = JSON.parse(fs.readFileSync("tokens.json"));
+                tokens.push(token);
+                fs.writeFileSync("tokens.json",JSON.stringify(tokens));
+                return {ok: true, user: token};
             }
         }
     }
