@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "poppins", sans-serif;
 }
 body{
     width: 100vw;
@@ -8,6 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #cccccc;
 }
 .grande{
     width: 40vw;
@@ -16,7 +18,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: #00559A;
+    background-color: #0065b8;
     border-radius: 1.5vw;
 }
 .bienvenido{
