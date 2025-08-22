@@ -23,6 +23,7 @@ aside{
     position: relative;
     left: 9%;
     font-weight: 600;
+    margin-top: 11px;
 }
 .categorias:hover{
     cursor: pointer;

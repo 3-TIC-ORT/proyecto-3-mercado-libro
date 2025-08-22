@@ -23,6 +23,7 @@ aside{
     position: relative;
     left: 9%;
     font-weight: 600;
+    margin-top: 11px;
 }
 .categorias:hover{
     cursor: pointer;
@@ -193,7 +194,7 @@ nav{
 section{
     width: 84vw;
     height: 90%;
-    background-color: #F3F4F6;
+    background-color: #bbd6ff;
     margin-top: 1%;
     font-size: 4.5vw;
     display: flex;

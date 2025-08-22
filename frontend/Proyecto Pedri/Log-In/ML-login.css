@@ -17,6 +17,7 @@ body{
     align-items: center;
     justify-content: space-around;
     background-color: #00559A;
+    border-radius: 1.5vw;
 }
 .bienvenido{
     font-size: 350%;
